@@ -4115,3 +4115,8 @@ div.osano-cm-dialog__buttons.osano-cm-buttons > button {
     letter-spacing: initial;
     text-transform: none;
 }
+
+#donate-button img {
+    width: 65%;
+    margin-bottom: -15px;
+}

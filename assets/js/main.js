@@ -125,8 +125,8 @@
 				$image = $this.find('.image'), $img = $image.find('img'),
 				$link = $this.find('.link'),
 				x;
-console.log($img)
-console.log($img.attr('src'))
+//console.log($img)
+//console.log($img.attr('src'))
 			// Image.
 
 				// Set image.
