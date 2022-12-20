@@ -3515,7 +3515,7 @@ body.is-preload #header.alt {
 	-webkit-align-items: center;
 	-ms-align-items: center;
 	align-items: center;
-	background-image: url("../../images/banner.jpg");
+	background-image: url("../../img/site/banner.jpg");
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -4099,4 +4099,19 @@ body.is-menu-visible #menu .inner {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+#ebf09b74-b0ba-4ff4-8789-2fcde2bd8b80 {
+	box-shadow: none;
+}
+
+div.osano-cm-info__info-dialog-header.osano-cm-info-dialog-header > button {
+	line-height: initial;
+}
+
+div.osano-cm-dialog__buttons.osano-cm-buttons > button {
+    box-shadow: none;
+    height: initial;
+    letter-spacing: initial;
+    text-transform: none;
 }
