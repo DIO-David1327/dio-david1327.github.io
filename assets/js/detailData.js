@@ -13,7 +13,7 @@ var data_month = ([
     ['2022/12', 15, 8.79],
 ]);
 
-var date = '19/12/2022'
+var date = '04/02/2023'
 
 var detailData = {
     '2020/01': [
@@ -121,7 +121,15 @@ var detailData = {
         { 'dat': '2022-11-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
     ], '2022/12': [
         { 'dat': '2022-12-03', 'inc': 5, 'who': 'Kornelia M', 'pays': ['DE', 'Allemagne', 'Germany'] },
-        { 'dat': '2022-12-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['', ' ', ''] },
-        { 'dat': '2022-12-19', 'inc': 1.57, 'who': 'Dave R', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2022-12-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2022-12-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/01': [
+        { 'dat': '2023-01-02', 'inc': 4.5, 'who': 'etienne1306', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2023-01-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-01-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/02': [
+        { 'dat': '2023-02-01', 'inc': 4.5, 'who': 'florian p', 'pays': ['FR', 'France', 'France'] },
+        { 'dat': '2023-02-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ],
-};
+};    
