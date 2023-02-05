@@ -10,10 +10,10 @@ var data_month = ([
     ['2022/11', 15, 2.22],
     ['2022/12', 15, 8.79],
     ['2023/01', 15, 8.29],
-    ['2023/02', 15, 8.29],
+    ['2023/02', 15, 55.49],
 ]);
 
-var date = '04/02/2023'
+var date = '05/02/2023'
 
 var detailData = {
     '2020/01': [
@@ -130,6 +130,7 @@ var detailData = {
     ], '2023/02': [
         { 'dat': '2023-02-01', 'inc': 4.5, 'who': 'florian p', 'pays': ['FR', 'France', 'France'] },
         { 'dat': '2023-02-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-02-05', 'inc': 47.2, 'who': 'Ines L', 'pays': ['CH', 'Suisse', 'Swiss'] },
         { 'dat': '2023-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ],
-};    
+};
