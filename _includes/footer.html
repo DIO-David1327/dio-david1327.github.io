@@ -1,0 +1,47 @@
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    {%- include social.html -%}
+    {% if page.lang == "fr" %}
+    <ul class="copyright">
+      <span style="color:#FFFFFF;">© 2013-2023 - DIO-TOOLS-David1327, extension Grepolis <a
+          href="{{ site.baseurl }}/fr/">dio-david1327.github.io</a>
+        <br>
+        DIO-TOOLS-David1327 est un site non officiel, <strong>Grepolis</strong> et est la propriété de
+        <img alt="innogames gmbh" src="/img/grepolis/innogames.png"><strong> InnoGames GmbH</strong>
+        <br>
+        Tous droits réservés - Reproduction partielle ou totale interdite.
+        <br>
+        Ancien site disponible ici: <a href="http://www.tuto-de-david1327.com"
+          target="_blank">www.tuto-de-david1327.com</a></span>
+    </ul>
+    {% else %}
+    <ul class="copyright">
+      <span style="color:#FFFFFF;">© 2013-2023 - DIO-TOOLS-David1327, Grepolis extension <a
+          href="{{ site.baseurl }}/{{ page.lang }}/">dio-david1327.github.io</a>
+        <br>
+        DIO-TOOLS-David1327 is an unofficial site, <strong>Grepolis</strong> and is the property of
+        <img alt="innogames gmbh" src="/img/grepolis/innogames.png"><strong> InnoGames GmbH</strong>
+        <br>
+        All rights reserved - Partial or total reproduction prohibited.
+        <br>
+        Old site available here: <a href="http://www.tuto-de-david1327.com/en/"
+          target="_blank">www.tuto-de-david1327.com/en/</a></span>
+    </ul>
+    {% endif %}
+    <span style="font-size:14px;">
+      {% if page.lang == "fr" %}
+      <a href="{{ site.baseurl }}/{{ page.lang }}/" title="Accueil">Accueil</a>
+      {% else %}
+      <a href="{{ site.baseurl }}/{{ page.lang }}/" title="Home">Home</a>
+      {% endif %}
+      {% for post in site.pages %}
+      {% if post.categories == 'menu_footer' %}
+      {% if post.lang == page.lang %}
+      | <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </span>
+  </div>
+</footer>

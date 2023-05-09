@@ -1,2 +1,6 @@
-# ads.txt
-google.com, pub-0383259072647891, DIRECT, f08c47fec0942fa0
+---
+layout: null
+search: exclude
+---
+
+google.com, {{ site.google_adsense }}, DIRECT, f08c47fec0942fa0

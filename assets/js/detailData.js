@@ -1,7 +1,4 @@
 var data_month = ([
-    ['2022/03', 15, 0],
-    ['2022/04', 15, 0],
-    ['2022/05', 15, 9.36],
     ['2022/06', 15, 18.98],
     ['2022/07', 15, 9.22],
     ['2022/08', 15, 2.22],
@@ -11,9 +8,12 @@ var data_month = ([
     ['2022/12', 15, 8.79],
     ['2023/01', 15, 8.29],
     ['2023/02', 15, 59.99],
+    ['2023/03', 15, 13.79],
+    ['2023/04', 15, 3.79],
+    ['2023/05', 15, 2.22],
 ]);
 
-var date = '15/02/2023'
+var date = '05/05/2023'
 
 var detailData = {
     '2020/01': [
@@ -131,7 +131,16 @@ var detailData = {
         { 'dat': '2023-02-01', 'inc': 4.5, 'who': 'florian p', 'pays': ['FR', 'France', 'France'] },
         { 'dat': '2023-02-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2023-02-05', 'inc': 47.2, 'who': 'Ines L', 'pays': ['CH', 'Suisse', 'Swiss'] },
-        { 'dat': '2023-02-15', 'inc': 4.5, 'who': 'Ulrich S', 'pays': ['', '', ''] },
+        { 'dat': '2023-02-15', 'inc': 4.5, 'who': 'Ulrich S', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2023-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/03': [
+        { 'dat': '2023-03-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-03-14', 'inc': 10, 'who': 'Arkadiusz W', 'pays': ['PL', 'Pologne', ' '] },
+        { 'dat': '2023-03-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/04': [
+        { 'dat': '2023-04-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-04-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/05': [
+        { 'dat': '2023-05-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
     ],
-};        
+};

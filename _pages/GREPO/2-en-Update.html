@@ -1,0 +1,14 @@
+---
+lang: en
+layout: grepo
+permalink: /en/grepo/News.html
+published: true
+sitemap: false
+---
+
+{% assign posts = site.posts | where: "lang", page.lang | where: "categories", "Update" %}
+{% for post in posts limit: 1 %}
+<div class="gpcl header"><h2 style="line-height: 2.5;">{{ post.title }}</h2>
+</div>
+{{ post.content }}
+{% endfor %}

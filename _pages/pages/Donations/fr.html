@@ -1,0 +1,259 @@
+---
+lang: fr
+layout: page
+permalink: /fr/pages/Donations.html
+role: Donations
+title: "Dons reçus"
+description: ""
+cover_image: ""
+categories: menu
+published: true
+---
+
+<!-- Scripts -->
+<link rel="stylesheet" href="/assets/css/Don.css" />
+<script src="/assets/js/detailData.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+<!-- Main -->
+<div id="main" class="alt">
+
+	<!-- One -->
+	<section id="one">
+		<div class="inner">
+			<header class="major">
+				<h1>Dons reçus</h1>
+			</header>
+			<p class="text-justify">Nous tenons à remercier tout le monde pour chaque don, en espérant que vous
+				apprécierez notre travail en faisant des dons volontaires qui vous permettent à la fois d'entretenir
+				l'infrastructure (chaque mois nous avons besoin de 15€) et de poursuivre le développement de
+				DIO-TOOLS-David1327.</p>
+			<div id="chart_div"></div>
+			<div class="text-info">Cliquez sur un mois sur le graphique pour afficher les détails.</div>
+			<div id="date"></div>
+			<table id="donations_detail" class="display table table-striped table-bordered"
+				style="font: 12px/18px Arial, Sans-serif;" style="display:none;">
+				<thead>
+					<tr>
+						<th>Date de réception</th>
+						<th>Montant</th>
+						<th>Paiement</th>
+						<th>Pays</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th colspan="2" style="text-align: right !important;">TOTAL:</th>
+						<th colspan="2"></th>
+					</tr>
+				</tfoot>
+			</table>
+
+			<script type="text/javascript">
+				$("#date").html('<small><i class="fa fa-calendar"></i> Date de dernière mise à jour : ' + date + '</small>');
+
+				(function ($) {
+					$.fn.parallax = function (options) {
+						var windowHeight = $(window).height();
+						var settings = $.extend({
+							speed: 0.15
+						}, options);
+
+						return this.each(function () {
+							var $this = $(this);
+							$(document).scroll(function () {
+								var scrollTop = $(window).scrollTop();
+								var offset = $this.offset().top;
+								var height = $this.outerHeight();
+								if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
+									return;
+								}
+								var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
+								var xBgPosition = $this.css('background-position').split(' ')[0];
+								$this.css('background-position', xBgPosition + ' ' + yBgPosition + 'px');
+							});
+						});
+					}
+				}(jQuery));
+
+				$("#grcModal").on("show.bs.modal", function (e) {
+					var link = $(e.relatedTarget);
+					$(this).find(".modal-content").load(link.attr("href"));
+				});
+
+				$(document).ready(function () {
+					// $(document).tooltip();
+
+					google.load("visualization", "1", {
+						packages: ["corechart"]
+					});
+
+					function drawChart() {
+						var data = google.visualization.arrayToDataTable([
+							['Mois', 'Requis mensuellement (€)', 'Dons reçus (€)'],
+							data_month[0],
+							data_month[1],
+							data_month[2],
+							data_month[3],
+							data_month[4],
+							data_month[5],
+							data_month[6],
+							data_month[7],
+							data_month[8],
+							data_month[9],
+							data_month[10],
+							data_month[11],
+						]);
+						var options = {
+							title: 'Dons reçus au cours des 12 derniers mois',
+							hAxis: {
+								'slantedText': false
+							},
+							legend: 'top',
+						};
+						var chart = new google.visualization.LineChart(document.getElementById("chart_div"));
+						chart.draw(data, options);
+						google.visualization.events.addListener(chart, 'select', function () {
+							try {
+								//console.log(data.getValue(chart.getSelection()[0].row,0));
+								//console.log(detailData[data.getValue(chart.getSelection()[0].row,0)]);
+								//drawDetail(detailData[data.getValue(chart.getSelection()[0].row,0)]);
+								drawDetail(data.getValue(chart.getSelection()[0].row, 0));
+							} catch (e) { }
+						});
+					}
+					setTimeout(function () {
+						drawChart();
+					}, 2000);
+					//drawChart();
+					function drawDetail(period) {
+						dataSet = detailData[period];
+						try {
+							donTable.destroy();
+						} catch (e) { }
+						donTable = $('#donations_detail').DataTable({
+							language: {
+								"sProcessing": "Traitement en cours...",
+								"sSearch": "Rechercher&nbsp;:",
+								"sLengthMenu": "Afficher _MENU_ &eacute;l&eacute;ments",
+								"sInfo": "Affichage de l'&eacute;l&eacute;ment _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+								"sInfoEmpty": "Affichage de l'&eacute;l&eacute;ment 0 &agrave; 0 sur 0 &eacute;l&eacute;ment",
+								"sInfoFiltered": "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+								"sInfoPostFix": "",
+								"sLoadingRecords": "Chargement en cours...",
+								"sZeroRecords": "Aucun &eacute;l&eacute;ment &agrave; afficher",
+								"sEmptyTable": "Aucune donn&eacute;e disponible dans le tableau",
+								"oPaginate": {
+									"sFirst": "Premier",
+									"sPrevious": "Pr&eacute;c&eacute;dent",
+									"sNext": "Suivant",
+									"sLast": "Dernier"
+								},
+								"oAria": {
+									"sSortAscending": ": activer pour trier la colonne par ordre croissant",
+									"sSortDescending": ": activer pour trier la colonne par ordre d&eacute;croissant"
+								}
+							},
+							paging: true,
+							pagingType: "full_numbers",
+							info: true,
+							searching: false,
+							dom: '<"toolbar">ritlp',
+							data: dataSet,
+							columns: [{
+								data: "dat",
+								sClass: "text-center"
+							},
+							{
+								data: "inc",
+								sClass: "text-right",
+								fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+									// $(nTd).html(iCol)
+									$(nTd).html(oData.inc.toLocaleString('en', {
+										style: 'currency',
+										currency: 'EUR'
+									}))
+								}
+							},
+							{
+								data: "who"
+							},
+							{
+								data: "pays",
+								fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+									if (oData.pays[0] === "") $(nTd).html('<img src="/img/flag/flag.16.xx.png" style="margin:0 5px; float: left;">' + oData.pays[1])
+									else if (oData.pays[0] === "GB") $(nTd).html('<img src="/img/flag/flag.16.en.png" style="margin:0 5px; float: left;">' + oData.pays[1])
+									else $(nTd).html('<img src="/img/flag/flag.16.' + oData.pays[0].toLowerCase() + '.png" style="margin:0 5px; float: left;">' + oData.pays[1])
+								}
+							},
+							],
+							"order": [
+								[0, 'desc']
+							],
+							"footerCallback": function (row, data, start, end, display) {
+								var api = this.api(),
+									data;
+
+								// Remove the formatting to get integer data for summation
+								var intVal = function (i) {
+									return typeof i === 'string' ?
+										i.replace(/[$,]/g, '') * 1 :
+										typeof i === 'number' ?
+											i : 0;
+								};
+
+								// Total over all pages
+								total = api
+									.column(1)
+									.data()
+									.reduce(function (a, b) {
+										return intVal(a) + intVal(b);
+									}, 0);
+
+								// Total over this page
+								pageTotal = api
+									.column(1, {
+										page: 'current'
+									})
+									.data()
+									.reduce(function (a, b) {
+										return intVal(a) + intVal(b);
+									}, 0);
+
+								// Update footer
+								$(api.column(1).footer()).html(
+									// pageTotal.toLocaleString('en', { style: 'currency', currency: 'EUR' }) +
+									// ' ( '+ total.toLocaleString('en', { style: 'currency', currency: 'EUR' }) +' total)'
+									total.toLocaleString('en', {
+										style: 'currency',
+										currency: 'EUR'
+									}) +
+									' (' + (total / 15).toLocaleString('en', {
+										style: 'percent'
+									}) + ')'
+								);
+							}
+						});
+						$("div.toolbar").html(
+							'<h3>Dons reçus au cours du mois: ' + period + '</h3>' +
+							'<p>Tous les dons indiqués sont les montants reçus après déduction de la commission par PayPal.</br>' +
+							'<span class="text-danger">' + ('Veuillez noter que la plupart des dépôts inférieurs à #MIN# couvrent les commissions.'.replace('#MIN#', (0.5).toLocaleString('en', {
+								style: 'currency',
+								currency: 'EUR'
+							}))) + '</span></p>'
+						);
+						$('#donations_detail_wrapper').removeClass("dataTables_wrapper");
+
+					}
+					donTable = $('#donations_detail').DataTable({
+
+					}), $('#donations_detail_wrapper').hide();
+
+				});
+			</script>
+		</div>
+	</section>
+
+</div>

@@ -1,0 +1,17 @@
+{% for post in site.pages %}
+    {% if post.categories == 'Features' %}
+        {% if post.lang == page.lang %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}" class="button" title="{{ post.description }}">{{ post.title }}</a></li>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<!--
+<li><a class="button active">Units</a></li>
+<li><a href="/Features/Forum.html" class="button">Forum</a></li>
+<li><a href="/Features/Trade.html" class="button">Trade</a></li>
+<li><a href="/Features/Layout.html" class="button">Layout</a></li>
+<li><a href="/Features/Attack.html" class="button">Attack</a></li>
+<li><a href="/Features/Misc.html" class="button">Misc</a></li>
+<li><a href="/Features/Premium.html" class="button">Premium</a></li>
+<li><a href="/Features/Quack.html" class="button">Quack</a></li>-->

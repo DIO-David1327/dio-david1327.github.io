@@ -1,0 +1,42 @@
+<!-- Menu -->
+<nav id="menu">
+    <ul class="links">
+      {% if page.lang == "fr" %}
+        <li><a href="{{ site.baseurl }}/{{ page.lang }}/" >Accueil</a></li>
+      {% else %}
+        <li><a href="{{ site.baseurl }}/{{ page.lang }}/" >Home</a></li>
+      {% endif %}
+      {% for post in site.pages %}
+        {% if post.role == 'Installation' %}
+          {% if post.lang == page.lang %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% for post in site.pages %}
+        {% if post.role == 'Features' %}
+          {% if post.lang == page.lang %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% for post in site.pages %}
+    {% if post.role == 'News' %}
+      {% if post.lang == page.lang %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% for post in site.pages %}
+    {% if post.role == 'Donations' %}
+      {% if post.lang == page.lang %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+    </ul>
+    <!-- <ul class="actions stacked">
+                    <li><a href="#" class="button primary fit">Get Started</a></li>
+                    <li><a href="#" class="button fit">Log In</a></li>
+                </ul> -->
+  </nav>

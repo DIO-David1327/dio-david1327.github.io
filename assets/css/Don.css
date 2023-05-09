@@ -162,14 +162,19 @@
    display: none;
  }
 
- #chart_div > div > div:nth-child(1) > div > svg > rect {
-  fill: rgb(49 53 70);
+ #chart_div>div>div:nth-child(1)>div>svg>rect {
+   fill: rgb(49 53 70);
  }
 
-#chart_div > div > div:nth-child(1) > div > svg text {
-  fill: rgb(255, 255, 255);
+ #chart_div>div>div:nth-child(1)>div>svg text {
+   fill: rgb(255, 255, 255);
  }
 
-#chart_div > div > div:nth-child(1) > div > svg > g:nth-child(6) > g > path {
-  fill: rgb(60 60 60);
+ #chart_div>div>div:nth-child(1)>div>svg>g:nth-child(6)>g>path {
+   fill: rgb(60 60 60);
+ }
+
+ #date {
+   font-size: 15px;
+   margin-bottom: 30px;
  }

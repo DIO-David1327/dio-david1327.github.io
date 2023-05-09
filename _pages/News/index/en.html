@@ -1,0 +1,55 @@
+---
+lang: en
+layout: page
+permalink: /en/News/
+role: News
+title: "News"
+description: "All news about the DIO-TOOLS-David1327 script (news and bug fixes)"
+published: true
+---
+
+<!-- Banner -->
+<!-- Note: The "styleN" class below should match that of the header element. -->
+<section id="banner" class="style3">
+    <div class="inner">
+        <span class="image">
+            <img src="/img/site/pic07.jpg" alt="" />
+        </span>
+        <header class="major">
+            <h1>News DIO-TOOLS-David1327</h1>
+        </header>
+        <div class="content">
+            <p>All news about the DIO-TOOLS-David1327 script (news and bug fixes)</p>
+        </div>
+    </div>
+</section>
+
+<section class="details-card">
+    <div class="container">
+        <div class="row">
+            {% assign posts = site.posts | where: "lang", page.lang %}
+            {% for post in posts limit: 2 %}
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                        <div class="gpcl header">
+                            <h2 style="line-height: 2.2;">{{ post.title }}</h2></div>
+                        <span>
+                            <h4><a href="/en/News/{{ post.categories[-1] }}" class="btn-card">{{ post.categories[-1] | replace: "-", " "}}</a></h4>
+                        </span>
+                    </div>
+                    <div class="card-desc">
+                        {{ post.excerpt }}
+                        <a href="{{ post.url }}" class="btn-card">Lire la suite</a>
+                        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                            {%- assign date_format = site.minima.date_format | default: "%d/%m/%Y" -%}
+                            {{ post.date | date: date_format }}
+                        </time>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

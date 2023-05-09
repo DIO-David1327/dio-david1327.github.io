@@ -1,0 +1,276 @@
+---
+lang: en
+layout: grepo
+permalink: /en/grepo/Donations.html
+published: true
+sitemap: false
+---
+<!DOCTYPE HTML>
+<html>
+
+<body class="is-preload">
+    <style>
+        #donations_detail_length,
+        #donations_detail_paginate {
+            display: none;
+        }
+
+        .text-danger {
+            color: #a94442;
+        }
+    </style>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/detailData.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <!-- <p class="text-justify">We would like to thank everyone for each donation, hoping you will enjoy our
+						work in making voluntary donations that allow you both to maintain the infrastructure (each
+						month we need € 15) and to continue the development of DIO-TOOLS-David1327.</p>-->
+                    <div id="chart_div"></div>
+                    <div class="text-info">Click a month on the chart to view details.</div>
+                    <div id="date"></div>
+                    <table id="donations_detail" class="display table table-striped table-bordered"
+                        style="font: 12px/18px Arial, Sans-serif;" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th>Date of receipt</th>
+                                <th>Amount</th>
+                                <th>Payment</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2" style="text-align: right !important;">TOTAL:</th>
+                                <th colspan="2"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <script type="text/javascript">
+                        $("#date").html('<small><i class="fa fa-calendar"></i> Last edited: ' + date + '</small>');
+        
+                        (function ($) {
+                            $.fn.parallax = function (options) {
+                                var windowHeight = $(window).height();
+                                var settings = $.extend({
+                                    speed: 0.15
+                                }, options);
+
+                                return this.each(function () {
+                                    var $this = $(this);
+                                    $(document).scroll(function () {
+                                        var scrollTop = $(window).scrollTop();
+                                        var offset = $this.offset().top;
+                                        var height = $this.outerHeight();
+                                        if (offset + height <= scrollTop || offset >= scrollTop + windowHeight) {
+                                            return;
+                                        }
+                                        var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
+                                        var xBgPosition = $this.css('background-position').split(' ')[0];
+                                        $this.css('background-position', xBgPosition + ' ' + yBgPosition + 'px');
+                                    });
+                                });
+                            }
+                        }(jQuery));
+
+                        $("#grcModal").on("show.bs.modal", function (e) {
+                            var link = $(e.relatedTarget);
+                            $(this).find(".modal-content").load(link.attr("href"));
+                        });
+
+                        $(document).ready(function () {
+                            // $(document).tooltip();
+
+                            google.load("visualization", "1", {
+                                packages: ["corechart"]
+                            });
+
+                            function drawChart() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Month', 'Required monthly (€)', 'Donations received (€)'],
+                                    data_month[0],
+                                    data_month[1],
+                                    data_month[2],
+                                    data_month[3],
+                                    data_month[4],
+                                    data_month[5],
+                                    data_month[6],
+                                    data_month[7],
+                                    data_month[8],
+                                    data_month[9],
+                                    data_month[10],
+                                    data_month[11],
+                                ]);
+                                var options = {
+                                    title: 'Donations received for the last 12 months',
+                                    hAxis: {
+                                        'slantedText': false
+                                    },
+                                    legend: 'top',
+                                };
+                                var chart = new google.visualization.LineChart(document.getElementById("chart_div"));
+                                chart.draw(data, options);
+                                google.visualization.events.addListener(chart, 'select', function () {
+                                    try {
+                                        //console.log(data.getValue(chart.getSelection()[0].row,0));
+                                        //console.log(detailData[data.getValue(chart.getSelection()[0].row,0)]);
+                                        //drawDetail(detailData[data.getValue(chart.getSelection()[0].row,0)]);
+                                        drawDetail(data.getValue(chart.getSelection()[0].row, 0));
+                                    } catch (e) { }
+                                });
+                            }
+                            setTimeout(function () {
+                                drawChart();
+                            }, 2000);
+                            //drawChart();
+                            function drawDetail(period) {
+                                dataSet = detailData[period];
+                                try {
+                                    donTable.destroy();
+                                } catch (e) { }
+                                donTable = $('#donations_detail').DataTable({
+                                    language: {
+                                        "sEmptyTable": "No data available in table",
+                                        "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                                        "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                                        "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                                        "sInfoPostFix": "",
+                                        "sInfoThousands": ",",
+                                        "sLengthMenu": "Show _MENU_ entries",
+                                        "sLoadingRecords": "Loading...",
+                                        "sProcessing": "Processing...",
+                                        "sSearch": "Search:",
+                                        "sZeroRecords": "No matching records found",
+                                        "oPaginate": {
+                                            "sFirst": "First",
+                                            "sLast": "Last",
+                                            "sNext": "Next",
+                                            "sPrevious": "Previous"
+                                        },
+                                        "oAria": {
+                                            "sSortAscending": ": activate to sort column ascending",
+                                            "sSortDescending": ": activate to sort column descending"
+                                        }
+                                    },
+                                    paging: true,
+                                    pagingType: "full_numbers",
+                                    info: true,
+                                    searching: false,
+                                    dom: '<"toolbar">ritlp',
+                                    data: dataSet,
+                                    columns: [{
+                                        data: "dat",
+                                        sClass: "text-center"
+                                    },
+                                    {
+                                        data: "inc",
+                                        sClass: "text-right",
+                                        fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                                            // $(nTd).html(iCol)
+                                            $(nTd).html(oData.inc.toLocaleString('en', {
+                                                style: 'currency',
+                                                currency: 'EUR'
+                                            }))
+                                        }
+                                    },
+                                    {
+                                        data: "who"
+                                    },
+                                    {
+                                        data: "pays",
+                                        fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                                            if (oData.pays[0] === "") $(nTd).html('<img src="/img/flag/flag.16.xx.png" style="margin:0 5px; float: left;">' + oData.pays[2])
+                                            else if (oData.pays[0] === "GB") $(nTd).html('<img src="/img/flag/flag.16.en.png" style="margin:0 5px; float: left;">' + oData.pays[2])
+                                            else $(nTd).html('<img src="/img/flag/flag.16.' + oData.pays[0].toLowerCase() + '.png" style="margin:0 5px; float: left;">' + oData.pays[2])
+                                        }
+                                    },
+                                    ],
+                                    "order": [
+                                        [0, 'desc']
+                                    ],
+                                    "footerCallback": function (row, data, start, end, display) {
+                                        var api = this.api(),
+                                            data;
+
+                                        // Remove the formatting to get integer data for summation
+                                        var intVal = function (i) {
+                                            return typeof i === 'string' ?
+                                                i.replace(/[$,]/g, '') * 1 :
+                                                typeof i === 'number' ?
+                                                    i : 0;
+                                        };
+
+                                        // Total over all pages
+                                        total = api
+                                            .column(1)
+                                            .data()
+                                            .reduce(function (a, b) {
+                                                return intVal(a) + intVal(b);
+                                            }, 0);
+
+                                        // Total over this page
+                                        pageTotal = api
+                                            .column(1, {
+                                                page: 'current'
+                                            })
+                                            .data()
+                                            .reduce(function (a, b) {
+                                                return intVal(a) + intVal(b);
+                                            }, 0);
+
+                                        // Update footer
+                                        $(api.column(1).footer()).html(
+                                            // pageTotal.toLocaleString('en', { style: 'currency', currency: 'EUR' }) +
+                                            // ' ( '+ total.toLocaleString('en', { style: 'currency', currency: 'EUR' }) +' total)'
+                                            total.toLocaleString('en', {
+                                                style: 'currency',
+                                                currency: 'EUR'
+                                            }) +
+                                            ' (' + (total / 15).toLocaleString('en', {
+                                                style: 'percent'
+                                            }) + ')'
+                                        );
+                                    }
+                                });
+                                $("div.toolbar").html(
+                                    '<h3>Donations received during the month: ' + period + '</h3>' +
+                                    '<p>All donations shown are the amounts received after deduction of commission by PayPal.</br>' +
+                                    '<span class="text-danger">' + ('Please note that most deposits below #MIN# cover commissions.'.replace('#MIN#', (0.5).toLocaleString('en', {
+                                        style: 'currency',
+                                        currency: 'EUR'
+                                    }))) + '</span></p>'
+                                );
+                                $('#donations_detail_wrapper').removeClass("dataTables_wrapper");
+
+                            }
+                            donTable = $('#donations_detail').DataTable({
+
+                            }), $('#donations_detail_wrapper').hide();
+
+                        });
+                    </script>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+</body>
+
+</html>

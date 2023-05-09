@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+{%- include head.html -%}
+
+<body class="is-preload">
+
+  {%- include header.html -%}
+
+  <main class="page-content" aria-label="Content">
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              {% if page.lang == "fr" %}
+                <h1>En cours de création</h1>
+              {% else %}
+                <h1>Being created</h1>
+              {% endif %}
+            </header>
+          </div>
+        </section>
+      </div>
+
+      {%- include footer.html -%}
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="/assets/js/jquery.scrolly.min.js"></script>
+  <script src="/assets/js/jquery.scrollex.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

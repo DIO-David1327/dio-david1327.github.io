@@ -1,0 +1,74 @@
+title: DIO-TOOLS-David1327
+
+description:
+  en: "DIO-Tools + Quack is a small extension of the browser game Grepolis. (counter, displays, smileys, trade options, layout changes)"
+  fr: "DIO-Tools + Quack est une petite extension du jeu par navigateur Grepolis. (compteur, affichages, smileys, options commerciales, modifications de la mise en page)"
+
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# dribbble_username: /
+discord_username: Q7WXtmRNRW
+facebook_username: TutoDeDavid1327
+# flickr_username: /
+github_username: "DIO-David1327/DIO-TOOLS-David1327"
+# instagram_username: /
+# linkedin_username: /
+# pinterest_username: /
+twitter_username: tutodedavid1327
+youtube_username: "@David1327"
+# googleplus_username: /
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+feed:
+  filter:
+    lang:
+      en:
+        path: /en/feed.xml
+      fr:
+        path: /fr/flux.xml
+
+exclude:
+#   - .sass-cache/
+ - .jekyll-cache/
+#   - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+default_lang: en
+
+languages:
+  - name: English
+    key: en
+  - name: Français
+    key: fr
+
+include:
+ - _pages
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+
+google_analytics : G-ECSDN9C8VM
+google_adsense : pub-0383259072647891
+
+permalink: /:categories/:title.html

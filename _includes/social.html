@@ -1,0 +1,24 @@
+<ul class="icons">
+  {%- if site.discord_username -%}<li><a href="https://discord.gg/{{ site.discord_username| cgi_escape | escape }}" target="_blank" class="icon brands alt fa-discord"><span class="label">discord</span></a></li>{%- endif -%}
+  {%- if site.facebook_username -%}<li><a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>{%- endif -%}
+  {%- if site.twitter_username -%}<li><a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>{%- endif -%}
+  {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| escape }}" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>{%- endif -%}
+  {%- if site.youtube_username -%}<li><a href="https://youtube.com/{{ site.youtube_username | escape }}" target="_blank" class="icon brands alt fa-youtube"><span class="label">youtube</span></a></li>{%- endif -%}
+
+  
+  <li style="height: 10px; margin-top: 10px;">
+    {% if page.lang == "fr" %}
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="hosted_button_id" value="XYZS3Q3APWLUJ" />
+      <input type="image" style="margin-bottom: -15px;" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Bouton Faites un don avec PayPal" />
+      <img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+    {% else %}
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="hosted_button_id" value="GAFP5WFRRVDWG" />
+      <input type="image" style="margin-bottom: -15px; width: 65%;" src="https://pics.paypal.com/00/s/ZTVjMDBjYzctNzNmMi00N2M0LWI0ZDYtMDZlM2ExZjRiY2Ey/file.PNG" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+    {% endif %}
+  </li>
+</ul>
