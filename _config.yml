@@ -1,8 +1,8 @@
 title: DIO-TOOLS-David1327
 
-description:
-  en: "DIO-Tools + Quack is a small extension of the browser game Grepolis. (counter, displays, smileys, trade options, layout changes)"
-  fr: "DIO-Tools + Quack est une petite extension du jeu par navigateur Grepolis. (compteur, affichages, smileys, options commerciales, modifications de la mise en page)"
+#description:
+#  en: "DIO-Tools + Quack is a small extension of the browser game Grepolis. (counter, displays, smileys, trade options, layout changes)"
+#  fr: "DIO-Tools + Quack est une petite extension du jeu par navigateur Grepolis. (compteur, affichages, smileys, options commerciales, modifications de la mise en page)"
 
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
