@@ -10,10 +10,10 @@ var data_month = ([
     ['2023/02', 15, 59.99],
     ['2023/03', 15, 13.79],
     ['2023/04', 15, 3.79],
-    ['2023/05', 15, 2.22],
+    ['2023/05', 15, 21.29],
 ]);
 
-var date = '05/05/2023'
+var date = '10/05/2023'
 
 var detailData = {
     '2020/01': [
@@ -61,10 +61,10 @@ var detailData = {
         { 'dat': '2021-02-04', 'inc': 19.07, 'who': 'Artur Z', 'pays': ['PL', 'Pologne', 'Poland'] },
     ], '2021/03': [
         { 'dat': '2021-03-06', 'inc': 4.4, 'who': 'Therese S', 'pays': ['CZ', 'Tchéquie', 'Czechia'] },
-        { 'dat': '2021-03-18', 'inc': 9.16, 'who': 'Eli M', 'pays': ['AU', 'Australie', 'Australia'] },
+        { 'dat': '2021-03-18', 'inc': 9.16, 'who': 'elifoxo', 'pays': ['AU', 'Australie', 'Australia'] },
         { 'dat': '2021-03-22', 'inc': 19.07, 'who': 'Sven K', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2021-03-28', 'inc': 9.36, 'who': 'Uwe J', 'pays': ['DE', 'Allemagne', 'Germany'] },
-        { 'dat': '2021-03-31', 'inc': 9.16, 'who': 'Eli M', 'pays': ['AU', 'Australie', 'Australia'] },
+        { 'dat': '2021-03-31', 'inc': 9.16, 'who': 'elifoxo', 'pays': ['AU', 'Australie', 'Australia'] },
     ], '2021/04': [
     ], '2021/05': [
         { 'dat': '2021-05-03', 'inc': 19.07, 'who': 'Elwira G', 'pays': ['DE', 'Allemagne', 'Germany'] },
@@ -135,12 +135,13 @@ var detailData = {
         { 'dat': '2023-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ], '2023/03': [
         { 'dat': '2023-03-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
-        { 'dat': '2023-03-14', 'inc': 10, 'who': 'Arkadiusz W', 'pays': ['PL', 'Pologne', ' '] },
+        { 'dat': '2023-03-14', 'inc': 10, 'who': 'Arkadiusz W', 'pays': ['PL', 'Pologne', 'Poland'] },
         { 'dat': '2023-03-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ], '2023/04': [
         { 'dat': '2023-04-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2023-04-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ], '2023/05': [
         { 'dat': '2023-05-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-05-10', 'inc': 19.07, 'who': 'Uwe S', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ],
 };
