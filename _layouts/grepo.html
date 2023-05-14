@@ -1,6 +1,11 @@
-{%- seo -%}
-{{ content }}
+<title>{{ page.title }}</title>
+<meta property="og:title" content="{{ page.title }}">
+{%- feed_meta -%}
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+{%- include google-analytics.html -%}
+{%- endif -%}
 
+{{ content }}
 
 <style>
     /*   Scrollbar Style: Chrome, opera, safari   */
