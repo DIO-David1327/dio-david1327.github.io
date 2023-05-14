@@ -40,7 +40,7 @@ published: true
                     </div>
                     <div class="card-desc">
                         {{ post.excerpt }}
-                        <a href="{{ post.url }}" class="btn-card">Lire la suite</a>
+                        <a href="{{ post.url }}" class="btn-card">Read more</a>
                         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                             {%- assign date_format = site.minima.date_format | default: "%d/%m/%Y" -%}
                             {{ post.date | date: date_format }}
