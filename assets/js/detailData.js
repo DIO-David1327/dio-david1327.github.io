@@ -10,10 +10,10 @@ var data_month = ([
     ['2023/02', 15, 59.99],
     ['2023/03', 15, 13.79],
     ['2023/04', 15, 3.79],
-    ['2023/05', 15, 21.29],
+    ['2023/05', 15, 63.24],
 ]);
 
-var date = '10/05/2023'
+var date = '22/05/2023'
 
 var detailData = {
     '2020/01': [
@@ -143,5 +143,9 @@ var detailData = {
     ], '2023/05': [
         { 'dat': '2023-05-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2023-05-10', 'inc': 19.07, 'who': 'Uwe S', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2023-05-16', 'inc': 10, 'who': 'Heinz E', 'pays': ['AT', 'Autriche', 'Austria'] },
+        { 'dat': '2023-05-16', 'inc': 1, 'who': 'laurent k', 'pays': ['FR', 'France', 'France'] },
+        { 'dat': '2023-05-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2023-05-21', 'inc': 29.38, 'who': 'Ines L', 'pays': ['CH', 'Suisse', 'Swiss'] },
     ],
 };
