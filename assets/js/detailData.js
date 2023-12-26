@@ -1,5 +1,4 @@
 var data_month = ([
-    ['2022/12', 15, 8.79],
     ['2023/01', 15, 8.29],
     ['2023/02', 15, 59.99],
     ['2023/03', 15, 13.79],
@@ -10,10 +9,11 @@ var data_month = ([
     ['2023/08', 15, 34.39],
     ['2023/09', 15, 8.83],
     ['2023/10', 15, 8.29],
-    ['2023/11', 15, 2.22],
+    ['2023/11', 15, 3.79],
+    ['2023/12', 15, 24.45],
 ]);
 
-var date = '04/11/2023'
+var date = '26/12/2023'
 
 var detailData = {
     '2020/01': [
@@ -170,5 +170,11 @@ var detailData = {
         { 'dat': '2023-10-30', 'inc': 4.5, 'who': 'Yvonne H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2023/11': [
         { 'dat': '2023-11-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-11-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+    ], '2023/12': [
+        { 'dat': '2023-12-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2023-12-10', 'inc': 14.21, 'who': 'Walther M', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2023-12-11', 'inc': 6.45, 'who': 'thomas c', 'pays': ['FR', 'France', 'France'] },
+        { 'dat': '2023-12-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ],
 };
