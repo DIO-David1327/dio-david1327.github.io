@@ -12,11 +12,11 @@ p {margin: initial}
       <p class="post-meta" style="text-transform: initial;">
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {% if page.lang == "fr" %}
-          {%- assign date_format = site.minima.date_format | default: "Le %m/%d/%Y" -%}
+          {%- assign date_format = site.minima.date_format | default: "Le %d/%m/%Y" -%}
           {{ page.date | date: date_format }}
         </time>Dans <a href="/fr/News/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
           {% else %}
-          {%- assign date_format = site.minima.date_format | default: "On %m/%d/%Y" -%}
+          {%- assign date_format = site.minima.date_format | default: "On %d/%B/%Y" -%}
           {{ page.date | date: date_format }}
         </time>In <a href="/{{ page.lang }}/News/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
           {% endif %}
