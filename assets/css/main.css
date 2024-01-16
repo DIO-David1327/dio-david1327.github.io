@@ -4607,3 +4607,7 @@ a.btn-card {
 #trans_content td img {
 	margin: 0 5px -10px 5px;
 }
+
+#wrapper img {
+	max-width: 100%;
+}
