@@ -28,7 +28,8 @@ published: true
     <div class="container">
         <div class="row">
             {% assign posts = site.posts | where: "lang", page.lang %}
-            {% for post in posts limit: 2 %}
+            {% for post in posts limit: 3 %}
+            {% if post.categories[-1] != "BETA" %}
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
@@ -49,6 +50,7 @@ published: true
                     
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
