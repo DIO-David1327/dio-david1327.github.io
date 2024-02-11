@@ -31,7 +31,7 @@ published: true
         <div class="row">
             {% assign posts = site.posts | where: "lang", page.lang %}
             {% for post in posts %}
-            {% if post.categories[-1] == "Update" %}
+            {% if post.categories[-1] == "update" %}
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
