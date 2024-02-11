@@ -1,7 +1,7 @@
 ---
 lang: en
 layout: page
-permalink: /en/News/BETA
+permalink: /en/news/beta
 role: BETA
 title: "BETA"
 description: ""
@@ -32,7 +32,7 @@ sitemap: false
         <div class="row">
             {% assign posts = site.posts | where: "lang", page.lang %}
             {% for post in posts %}
-            {% if post.categories[-1] == "BETA" %}
+            {% if post.categories[-1] == "beta" %}
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
@@ -40,7 +40,7 @@ sitemap: false
                             style="text-align: center; height: 90px;font-size: 20px;line-height: 85px;color: #FFF;background: url(https://www.tuto-de-david1327.com/medias/images/header.png) no-repeat center;font-weight: bold;">
                             <h2 style="line-height: 2.2;">{{ post.title }}</h2></div>
                         <span>
-                            <h4><a href="/fr/News/{{ post.categories[-1] }}" class="btn-card">{{ post.categories[-1] | replace: "-", " "}}</a></h4>
+                            <h4><a href="/fr/news/{{ post.categories[-1] }}" class="btn-card">{{ post.categories[-1] | replace: "-", " "}}</a></h4>
                         </span>
                     </div>
                     <div class="card-desc">

@@ -1,7 +1,7 @@
 ---
 lang: fr
 layout: page
-permalink: /fr/News/
+permalink: /fr/news/
 role: News
 title: "News"
 description: "Toute l'actualité du script DIO-TOOLS-David1327 (actualités et corrections de bugs)"
@@ -29,7 +29,7 @@ published: true
         <div class="row">
             {% assign posts = site.posts | where: "lang", page.lang %}
             {% for post in posts limit: 3 %}
-            {% if post.categories[-1] != "BETA" %}
+            {% if post.categories[-1] != "beta" %}
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">

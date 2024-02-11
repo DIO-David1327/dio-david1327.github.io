@@ -14,7 +14,7 @@ p {margin: initial}
           {% if page.lang == "fr" %}
           {%- assign date_format = site.minima.date_format | default: "Le %d/%m/%Y" -%}
           {{ page.date | date: date_format }}
-        </time>Dans <a href="/fr/News/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
+        </time>Dans <a href="/fr/news/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
           {% else %}
           {%- assign date_format = site.minima.date_format | default: "On %d/%B/%Y" -%}
           {{ page.date | date: date_format }}
