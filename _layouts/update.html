@@ -18,7 +18,7 @@ p {margin: initial}
           {% else %}
           {%- assign date_format = site.minima.date_format | default: "On %d/%B/%Y" -%}
           {{ page.date | date: date_format }}
-        </time>In <a href="/{{ page.lang }}/News/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
+        </time>In <a href="/{{ page.lang }}/news/{{ page.categories[-1] }}" >{{ page.categories[-1] | replace: "-", " "}}</a>
           {% endif %}
         {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
