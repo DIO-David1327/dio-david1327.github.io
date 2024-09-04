@@ -207,8 +207,9 @@ var detailData = {
         { 'dat': '2024-08-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2024-08-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2024-08-23', 'inc': 5, 'who': 'Markus F', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2024/09': [
         { 'dat': '2024-09-01', 'inc': 5, 'who': 'etienne1306', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2024-09-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2024-09-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ],
-}; 
+};
