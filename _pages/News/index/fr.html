@@ -36,7 +36,7 @@ published: true
                         <div class="gpcl header">
                             <h2 style="line-height: 2.2;">{{ post.title }}</h2></div>
                         <span>
-                            <h4><a href="/fr/news/{{ post.categories[-1] }}" class="btn-card">{{ post.categories[-1] | replace: "-", " "}}</a></h4>
+                            <h4><a href="/fr/news/{{ post.categories[-1] }}" class="btn-card capitalize-first-letter">{{ post.categories[-1] | replace: "-", " " | replace: " a ", " à " | capitalize}}</a></h4>
                         </span>
                     </div>
                     <div class="card-desc">
