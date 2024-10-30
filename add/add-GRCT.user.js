@@ -47,8 +47,8 @@ setTimeout(() => {
     }
 
     // GM: EXPORT FUNCTIONS
-    uw.saveValueGM = function (name, val) { setTimeout(() => { GM_setValue(name, val); }, 0); };
-    uw.deleteValueGM = function (name) { setTimeout(() => { GM_deleteValue(name); }, 0); };
+    uw.saveValueGMM = function (name, val) { setTimeout(() => { GM_setValue(name, val); }, 0); };
+    uw.deleteValueGMM = function (name) { setTimeout(() => { GM_deleteValue(name); }, 0); };
 
     DATA = {
 
@@ -58,12 +58,12 @@ setTimeout(() => {
     };
 
     function saveValue(name, val) {
-        if (GMM) { uw.saveValueGM(name, val); }
+        if (GMM) { uw.saveValueGMM(name, val); }
         else { localStorage.setItem(name, val); }
     }
 
     function deleteValue(name) {
-        if (GMM) { uw.deleteValueGM(name); }
+        if (GMM) { uw.deleteValueGMM(name); }
         else { localStorage.removeItem(name); }
     }
 
