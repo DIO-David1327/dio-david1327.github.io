@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         add GRCT (DIO-TOOTS-David1327)
-// @version      1.1
+// @version      1.2
 // @description  add GRCT
 // @author       David1327
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
