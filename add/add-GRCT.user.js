@@ -1,17 +1,83 @@
 // ==UserScript==
-// @name         add GRCT
-// @version      2024-10-30
+// @name         add GRCT (DIO-TOOTS-David1327)
+// @version      1.0
 // @description  add GRCT
 // @author       David1327
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @grant        none
+// @match		https://*.grepolis.com/game/*
+// @require		https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+// @grant		GM_setValue
+// @grant		GM_getValue
+// @grant		GM_deleteValue
+// @grant		GM_xmlhttpRequest
+// @grant       GM_getResourceText
 // ==/UserScript==
-
 
 /*******************************************************************************************************************************
      * autre
      *******************************************************************************************************************************/
+setTimeout(() => {
+    var uw = unsafeWindow || window, $ = uw.jQuery, DATA, dio = uw.DIO_TOOLS.dio, Home_url = "https://dio-david1327.github.io", url_dev, GMM;
+    // GM-API?
+    if (GM.info.scriptHandler == "Greasemonkey") GMM = false
+    else GMM = (typeof GM_info === 'object');
 
+    let dio_version = uw.DIO_TOOLS.info_dio.version;
+
+    console.log('%c|= ' + GM.info.script.name + ' is active v' + GM.info.script.version + ' (' + GM.info.scriptHandler + ' v' + GM.info.version + ') [GMM ' + GMM + '] =|', 'color: green; font-size: 1em; font-weight: bolder; ', 'Discord:https://discord.gg/Q7WXtmRNRW');
+
+    var dio_icon = '<div class="dio_icon b"></div>';
+
+    let WID = uw.Game.world_id;
+    let MID = uw.Game.market_id;
+    let AID = uw.Game.alliance_id;
+    let PID = uw.Game.player_id;
+    let LID = uw.Game.locale_lang.split("_")[0]; // LID ="es";
+    let Points = uw.Game.player_points;
+    let pName = uw.Game.player_name;
+    let tName = uw.Game.townName;
+
+    function loadValue(name, default_val) {
+        var value;
+        if (GMM) { value = GM_getValue(name, default_val); }
+        else { value = localStorage.getItem(name) || default_val; }
+
+        if (typeof (value) === "string") { value = JSON.parse(value) }
+        return value;
+    }
+
+    DATA = {
+
+        radar: loadValue(WID + "_radar", '{ "default_timeCS":"06:00:00", "default_points":0}'),
+        //radar: loadValue(MID + "_radar", '{}'),
+
+    };
+
+    function getTexts(category, name, data) {
+        var txt = "???", lang = MID;
+        if (uw.DIO_LANG[lang]) {
+            if (uw.DIO_LANG[lang][category]) {
+                if (uw.DIO_LANG[lang][category][name]) { txt = uw.DIO_LANG[lang][category][name]; }
+                else {
+                    if (uw.DIO_LANG.en[category]) {
+                        if (uw.DIO_LANG.AUTO[category][name]) { txt = uw.DIO_LANG.AUTO[category][name]; }
+                        else if (uw.DIO_LANG.en[category][name]) { txt = uw.DIO_LANG.en[category][name]; }
+                    }
+                }
+            } else {
+                if (uw.DIO_LANG.en[category]) {
+                    if (uw.DIO_LANG.AUTO[category][name]) { txt = uw.DIO_LANG.AUTO[category][name]; }
+                    else if (uw.DIO_LANG.en[category][name]) { txt = uw.DIO_LANG.en[category][name]; }
+                }
+            }
+        } else {
+            if (uw.DIO_LANG.en[category]) {
+                if (uw.DIO_LANG.AUTO[category][name]) { txt = uw.DIO_LANG.AUTO[category][name]; }
+                else if (uw.DIO_LANG.en[category][name]) { txt = uw.DIO_LANG.en[category][name]; }
+            }
+        }
+        return txt;
+    }
     function filldiomenu() {
         if ($('#dio_mnu_list').length == 0) {
             $('<style id="dio__style"> ' +
@@ -66,9 +132,9 @@
             if ($('#grcrt_mnu').length) {
                 $('<style id="dio_dio-grct_style">' +
                     '#grcrt_mnu {display: contents;}' +
-                    '#grcrt_mnu .btn_settings.circle_button {top: -41px!important; right: 21px!important;}' +
+                    '#grcrt_mnu .btn_settings.circle_button {top: 6px!important; right: 21px!important;}' +
                     '#dio_mnu .btn_settings.circle_button {top: 6px; right: 37px;}' +
-                    '#dio_mnu { background: url(' + Home_url + '/img/dio/logo/dio-grct.png) no-repeat; width: 142px; height: 47px;}' +
+                    '#dio_mnu { background: url(' + Home_url + '/img/dio/logo/dio-grct.png) no-repeat; width: 142px; height: 47px; margin-top: -33px;}' +
                     '</style>').appendTo('head');
             };
         }, 2000);
@@ -97,8 +163,8 @@
         });
         $('#dio_mnu_list .Notification').tooltip(getTexts("Settings", "Update") + " " + dio_version + " / " + getTexts("labels", "donat") + " / " + getTexts("translations", "translations") + " / BUG");
     }
-    dio.menu[6] = { 'name': getTexts("hotkeys", "settings"), 'action': 'openSettings()', 'class': 'dio_icon ' }
-    dio.menu[5] = { 'name': getTexts("tutoriel", "tuto"), 'action': 'Notification.activate();', 'class': 'dio_icon Notification' }
+    dio.menu[6] = { 'name': getTexts("hotkeys", "settings"), 'action': 'uw.DIO_TOOLS.openSettings()', 'class': 'dio_icon ' }
+    dio.menu[5] = { 'name': getTexts("tutoriel", "tuto"), 'action': 'uw.DIO_TOOLS.Notification.activate();', 'class': 'dio_icon Notification' }
     filldiomenu()
 
 
@@ -206,7 +272,7 @@
                         }
                     }
                 });
-            } catch (error) { errorHandling(error, "Radar.info"); }
+            } catch (error) { /*errorHandling(error, "Radar.info");*/ }
         },
         DIO_Radar: () => {
             "use strict";
@@ -1004,12 +1070,12 @@
                                             DATA.radar.default_points = default_points;
                                             saveValue(WID + "_radar", JSON.stringify(DATA.radar));
                                             setTimeout(function () {
-                                                HumanMessage.success('MSGHUMAN.OK'); //RepConvTool.GetLabel('MSGHUMAN.OK')
+                                                uw.HumanMessage.success('MSGHUMAN.OK'); //RepConvTool.GetLabel('MSGHUMAN.OK')
                                             }, 0);
                                         } catch (err) {
                                             //                                            if (url_dev) console.log(RepConvTool.getCaller(arguments.callee.toString()));
                                             setTimeout(function () {
-                                                HumanMessage.error('MSGHUMAN.ERROR'); //RepConvTool.GetLabel('MSGHUMAN.ERROR')
+                                                uw.HumanMessage.error('MSGHUMAN.ERROR'); //RepConvTool.GetLabel('MSGHUMAN.ERROR')
                                             }, 0)
                                         }
                                     })
@@ -1112,8 +1178,8 @@
                 _dioWinIds[_IdS.toUpperCase()] = _IdS;
                 (function () {
                     "use strict";
-                    var a = window.GameControllers.TabController,
-                        b = window.GameModels.Progressable,
+                    var a = uw.window.GameControllers.TabController,
+                        b = uw.window.GameModels.Progressable,
                         c = a.extend({
                             initialize: function () {
                                 if (url_dev) console.log('initialize')
@@ -1300,14 +1366,14 @@
                             },
                             toWork: false
                         });
-                    window.GameViews['DiOTView_' + _IdS] = c
+                    uw.window.GameViews['DiOTView_' + _IdS] = c
                 })();
                 (function () {
                     "use strict";
-                    var a = window.GameViews,
-                        b = window.GameCollections,
-                        c = window.GameModels,
-                        d = window.WindowFactorySettings,
+                    var a = uw.window.GameViews,
+                        b = uw.window.GameCollections,
+                        c = uw.window.GameModels,
+                        d = uw.window.WindowFactorySettings,
                         e = uw.require("game/windows/ids"),
                         f = uw.require("game/windows/tabs"),
                         g = e[_IdS.toUpperCase()];
@@ -1391,7 +1457,7 @@
                 try {
                     (uw.WM.getWindowByType(_IdS)[0]).close()
                 } catch (e) { }
-                window.DIOtslWnd = uw.WF.open(_IdS);
+                uw.window.DIOtslWnd = uw.WF.open(_IdS);
             }
 
 
@@ -1414,8 +1480,8 @@
                 _dioWinIds[_IdS.toUpperCase()] = _IdS;
                 (function () {
                     "use strict";
-                    var a = window.GameControllers.TabController,
-                        b = window.GameModels.Progressable,
+                    var a = uw.window.GameControllers.TabController,
+                        b = uw.window.GameModels.Progressable,
                         c = a.extend({
                             listGroup: null,
                             initialize: function (b) {
@@ -1558,14 +1624,14 @@
                                 $(that).addClass('tsl_set');
                             }
                         });
-                    window.GameViews['DiOView_' + _IdS] = c
+                    uw.window.GameViews['DiOView_' + _IdS] = c
                 })();
                 (function () {
                     "use strict";
-                    var a = window.GameViews,
-                        b = window.GameCollections,
-                        c = window.GameModels,
-                        d = window.WindowFactorySettings,
+                    var a = uw.window.GameViews,
+                        b = uw.window.GameCollections,
+                        c = uw.window.GameModels,
+                        d = uw.window.WindowFactorySettings,
                         e = uw.require("game/windows/ids"),
                         f = uw.require("game/windows/tabs"),
                         g = e[_IdS.toUpperCase()];
@@ -1977,8 +2043,8 @@
                 _dioWinIds[_IdS.toUpperCase()] = _IdS;
                 (function () {
                     "use strict";
-                    var a = window.GameControllers.TabController,
-                        b = window.GameModels.Progressable,
+                    var a = uw.window.GameControllers.TabController,
+                        b = uw.window.GameModels.Progressable,
                         _content = $('<div/>', { 'id': 'townsoverview' }),
                         c = a.extend({
                             initialize: function (b) {
@@ -2034,14 +2100,14 @@
                             }
                         });
                     //window.GameViews.RrcRTViewTSL = c
-                    window.GameViews['DiOView_' + _IdS] = c
+                    uw.window.GameViews['DiOView_' + _IdS] = c
                 })();
                 (function () {
                     "use strict";
-                    var a = window.GameViews,
-                        b = window.GameCollections,
-                        c = window.GameModels,
-                        d = window.WindowFactorySettings,
+                    var a = uw.window.GameViews,
+                        b = uw.window.GameCollections,
+                        c = uw.window.GameModels,
+                        d = uw.window.WindowFactorySettings,
                         e = uw.require("game/windows/ids"),
                         f = uw.require("game/windows/tabs"),
                         g = e[_IdS.toUpperCase()];
@@ -2128,7 +2194,7 @@
                 }
 
                 function d(a, b, townId) {
-                    var c = uw.DiOGameDataResearches.getResearchCosts(a, townId);
+                    var c = uw.GameDataResearches.getResearchCosts(a, townId);
                     //console.log(a, townId)
                     return {
                         wood: { amount: Math.floor(c.wood, 10) },
@@ -2157,14 +2223,14 @@
                                     j += "<h5>" + e.building_dependencies + "</h5>";
                                     j += '<span class="requirement">' + uw.GameData.buildings.academy.name + " " + l.academy + "</span><br />";
                                 }
-                                if (!k.enough_resources) j += '<span class="requirement">' + e.not_enough_resources + '</span><br /><span class="requirement">' + s(e.enough_resources_in, uw.DateHelper.formatDateTimeNice(Timestamp.server() + k.time_to_build, !1)) + "</span><br />";
+                                if (!k.enough_resources) j += '<span class="requirement">' + e.not_enough_resources + '</span><br /><span class="requirement">' + s(e.enough_resources_in, uw.DateHelper.formatDateTimeNice(uw.Timestamp.server() + k.time_to_build, !1)) + "</span><br />";
                                 if (i) j += '<span class="requirement">' + e.full_queue + "</span><br />"
                             }
                             j += "</div>"
                             return j
                         }
                     };
-                window.DiOAcademyTooltipFactory = f
+                uw.window.DiOAcademyTooltipFactory = f
             }
 
 
@@ -2176,7 +2242,7 @@
                         return this.getResearchCosts(b, townId)
                     },
                     getResearchCosts: function (a, townId) {
-                        if (!(uw.MM.getCollections().PlayerHero[0])) { uw.MM.createBackboneObjects({ PlayerHeroes: null }, window.GameCollections, {}) }
+                        if (!(uw.MM.getCollections().PlayerHero[0])) { uw.MM.createBackboneObjects({ PlayerHeroes: null }, uw.window.GameCollections, {}) }
                         var b = a.resources, c = uw.GeneralModifications.getResearchResourcesModification(townId);
                         return {
                             wood: Math.ceil(b.wood * c),
@@ -2191,3 +2257,4 @@
         },
     };
     $(document).ready(function () { Academy_Overview.activate(); })
+}, 8000);
