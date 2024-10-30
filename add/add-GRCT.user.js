@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         add GRCT (DIO-TOOTS-David1327)
-// @version      1.0
+// @version      1.1
 // @description  add GRCT
 // @author       David1327
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
@@ -46,12 +46,26 @@ setTimeout(() => {
         return value;
     }
 
+    // GM: EXPORT FUNCTIONS
+    uw.saveValueGM = function (name, val) { setTimeout(() => { GM_setValue(name, val); }, 0); };
+    uw.deleteValueGM = function (name) { setTimeout(() => { GM_deleteValue(name); }, 0); };
+
     DATA = {
 
         radar: loadValue(WID + "_radar", '{ "default_timeCS":"06:00:00", "default_points":0}'),
         //radar: loadValue(MID + "_radar", '{}'),
 
     };
+
+    function saveValue(name, val) {
+        if (GMM) { uw.saveValueGM(name, val); }
+        else { localStorage.setItem(name, val); }
+    }
+
+    function deleteValue(name) {
+        if (GMM) { uw.deleteValueGM(name); }
+        else { localStorage.removeItem(name); }
+    }
 
     function getTexts(category, name, data) {
         var txt = "???", lang = MID;
@@ -884,7 +898,7 @@ setTimeout(() => {
                     __addons = ''
                     if (uw.MM.getModels().Town[eeT.id]) {
                         __addons += (uw.GameData.units[dd_units.getValue()].is_naval && uw.MM.getModels().Town[eeT.id].getResearches().get('cartography')) ? '<div class="dio_bonuses dio_cartography"></div>' : '';
-                        __addons += (uw.dd_units.getValue() == "colonize_ship" && uw.MM.getModels().Town[eeT.id].getResearches().get('set_sail')) ? '<div class="dio_bonuses dio_set_sail"></div>' : '';
+                        __addons += (dd_units.getValue() == "colonize_ship" && uw.MM.getModels().Town[eeT.id].getResearches().get('set_sail')) ? '<div class="dio_bonuses dio_set_sail"></div>' : '';
                         __addons += (uw.GameData.units[dd_units.getValue()].is_naval && uw.MM.getModels().Town[eeT.id].getBuildings().get('lighthouse') == 1) ? '<div class="dio_bonuses dio_lighthouse"></div>' : '';
                         __addons += !(uw.GameData.units[dd_units.getValue()].is_naval && uw.MM.getModels().Town[eeT.id].getResearches().get('meteorology')) ? '<div class="dio_bonuses dio_meteorology"></div>' : '';
                     }
@@ -1410,6 +1424,7 @@ setTimeout(() => {
         },
     };
     $(document).ready(function () { Radar.activate(); })
+    uw.DIO_TOOLS.Radar = Radar;
 
     /*******************************************************************************************************************************
      * Towns Sorted List
@@ -2257,4 +2272,4 @@ setTimeout(() => {
         },
     };
     $(document).ready(function () { Academy_Overview.activate(); })
-}, 8000);
+}, 5000);
