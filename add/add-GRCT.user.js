@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         add GRCT (DIO-TOOTS-David1327)
+// @namespace	https://dio-david1327.github.io
 // @version      1.2
 // @description  add GRCT
 // @author       David1327
