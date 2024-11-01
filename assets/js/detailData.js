@@ -1,5 +1,4 @@
 var data_month = ([
-    ['2023/11', 15, 3.79],
     ['2023/12', 15, 25.07],
     ['2024/01', 15, 51.64],
     ['2024/02', 10, 13.79],
@@ -10,10 +9,11 @@ var data_month = ([
     ['2024/07', 10, 3.79],
     ['2024/08', 10, 8.79],
     ['2024/09', 10, 10.79],
-    ['2024/10', 10, 2.22],
+    ['2024/10', 10, 5.79],
+    ['2024/11', 10, 0],
 ]);
 
-var date = '04/10/2024';
+var date = '01/11/2024';
 
 var detailData = {
     '2020/01': [
@@ -211,8 +211,11 @@ var detailData = {
         { 'dat': '2024-09-01', 'inc': 5, 'who': 'etienne1306', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2024-09-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
         { 'dat': '2024-09-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
-        { 'dat': '2024-09-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['', ' ', ''] },
+        { 'dat': '2024-09-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2024/10': [
         { 'dat': '2024-10-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2024-10-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2024-10-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2024/11': [
     ],
 };
