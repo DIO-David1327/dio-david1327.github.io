@@ -1,6 +1,7 @@
 //////////////////////////////////////////////
 //            Translation AUTO              //
 //////////////////////////////////////////////
+uw = unsafeWindow || window
 DIO_LANG.AUTO = {
     Notification: {
         //A: "",
