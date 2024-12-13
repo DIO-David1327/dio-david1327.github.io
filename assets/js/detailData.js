@@ -1,5 +1,4 @@
 var data_month = ([
-    ['2023/12', 15, 25.07],
     ['2024/01', 15, 51.64],
     ['2024/02', 10, 13.79],
     ['2024/03', 10, 3.79],
@@ -10,10 +9,11 @@ var data_month = ([
     ['2024/08', 10, 8.79],
     ['2024/09', 10, 10.79],
     ['2024/10', 10, 5.79],
-    ['2024/11', 10, 0],
+    ['2024/11', 10, 38.58],
+    ['2024/12', 10, 2.22],
 ]);
 
-var date = '01/11/2024';
+var date = '13/12/2024';
 
 var detailData = {
     '2020/01': [
@@ -217,5 +217,12 @@ var detailData = {
         { 'dat': '2024-10-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2024-10-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2024/11': [
+        { 'dat': '2024-11-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2024-11-07', 'inc': 9.36, 'who': 'Christiane G', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2024-11-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2024-11-24', 'inc': 23.43, 'who': 'Kathleen J', 'pays': ['US', 'États-Unis', 'United States'] },
+        { 'dat': '2024-11-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2024/12': [
+        { 'dat': '2024-12-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
     ],
 };
