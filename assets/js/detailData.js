@@ -1,8 +1,4 @@
 var data_month = ([
-    ['2024/01', 15, 51.64],
-    ['2024/02', 10, 13.79],
-    ['2024/03', 10, 3.79],
-    ['2024/04', 10, 28.79],
     ['2024/05', 10, 3.79],
     ['2024/06', 10, 3.79],
     ['2024/07', 10, 3.79],
@@ -10,10 +6,14 @@ var data_month = ([
     ['2024/09', 10, 10.79],
     ['2024/10', 10, 5.79],
     ['2024/11', 10, 38.58],
-    ['2024/12', 10, 2.22],
+    ['2024/12', 10, 37.75],
+    ['2025/01', 10, 24.86],
+    ['2025/02', 10, 27.38],
+    ['2025/03', 10, 15.79],
+    ['2025/04', 10, 2.22],
 ]);
 
-var date = '13/12/2024';
+var date = '07/04/2025';
 
 var detailData = {
     '2020/01': [
@@ -224,5 +224,28 @@ var detailData = {
         { 'dat': '2024-11-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2024/12': [
         { 'dat': '2024-12-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2024-12-13', 'inc': 9.36, 'who': 'lydie c', 'pays': ['FR', 'France', 'France'] },
+        { 'dat': '2024-12-14', 'inc': 19.07, 'who': 'Werner S', 'pays': ['', ' ', ''] },
+        { 'dat': '2024-12-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2024-12-21', 'inc': 3.53, 'who': 'helder m', 'pays': ['', ' ', ''] },
+        { 'dat': '2024-12-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/01': [
+        { 'dat': '2025-01-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2025-01-05', 'inc': 19.07, 'who': 'Walther M', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2025-01-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-01-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/02': [
+        { 'dat': '2025-02-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2025-02-09', 'inc': 2, 'who': 'helder m', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-02-16', 'inc': 19.59, 'who': 'Sidney A', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-02-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/03': [
+        { 'dat': '2025-03-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
+        { 'dat': '2025-03-11', 'inc': 10, 'who': 'Martina V', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-03-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-03-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/04': [
+        { 'dat': '2025-04-04', 'inc': 2.22, 'who': 'adriano g', 'pays': ['IT', 'Italie', 'Italy'] },
     ],
 };
