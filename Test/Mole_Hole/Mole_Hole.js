@@ -1087,7 +1087,7 @@ let uw = window, $ = uw.jQuery
             null == e && (e = Game.locale_lang.substring(0, 2),
                           MH.LngLda = Game.world_id.substring(0, 2),
                           "zz" == MH.LngLda && (MH.LngLda = "en"));
-            e = "https://github.com/DIO-David1327/Mole-hope/raw/main/Language/lng_" + e + ".js";
+            e = "https://dio-david1327.github.io/Test/Mole_Hole/Lang/" + e + ".js";
             /*if (e === "fr") {
             e = "https://greasyfork.org/scripts/423028-mhscript-lng-fr/code/MHscript_lng_fr.user.js";
         } else if (e === "de") {
