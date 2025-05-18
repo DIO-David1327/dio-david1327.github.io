@@ -6040,7 +6040,7 @@ function _mh5998734257() {
                 }).html(t[o]))))));
             return $("<div/>", {
                 class: "menu_wrapper",
-                style: "left:78px; right:34px"
+                style: "left:-50px; top: 8px;"
             }).append(a)
         }
         ,
@@ -7892,7 +7892,7 @@ MH.BBCode2HTML = function (e) {
                 MH.wo.InfoWord_bstallys()
             },
             error: function (e, t, n) {
-                404 == e.status && window.open(MH.Home + "?p=rnk&m=cnq" + MH.GetHomeUrlParm(), "_blank")
+                //404 == e.status && window.open(MH.Home + "?p=rnk&m=cnq" + MH.GetHomeUrlParm(), "_blank")
             }
         }) : MH.wo.InfoWord_bstallys()
     }
