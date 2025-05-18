@@ -29,11 +29,11 @@
         uw.HumanMessage.error("Mole Hole OFF (david1327)")
         var s=document.createElement('script');
         s.type='text/javascript';
-        s.src='https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole.js_'+Math.round(new Date().getTime()/60000);
+        s.src='https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole.js?_'+Math.round(new Date().getTime()/60000);
         var l=document.createElement('link');
         l.type='text/css';
         l.rel='stylesheet';
-        l.href='https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole.css_'+(new Date().getDay());
+        l.href='https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole.css?_'+(new Date().getDay());
         document.body.appendChild(s);
         console.log(s)
         document.body.appendChild(l);
