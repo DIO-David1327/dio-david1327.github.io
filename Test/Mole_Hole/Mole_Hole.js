@@ -4710,9 +4710,9 @@ MH.Init = {
                 return e;
             i += ("/themes/" + n + "/").length
         }
-        return e = e.substr(i),
+        /*return e = e.substr(i),
             1 == t ? a + MH.Home + "themes/" + n + "/" + e : (_log(a + MH.GameImg + "/images/game/" + e),
-                a + MH.GameImg + "/images/game/" + e)
+                a + MH.GameImg + "/images/game/" + e)*/
     }
     ,
     MH.theme.BlueRoofs = function (e) {
@@ -4734,7 +4734,8 @@ MH.Init = {
                 0 < t.indexOf("tower") && (n = !0),
                 0 < t.indexOf("trade_office") && (n = !0),
                 0 < t.indexOf("street") && (n = !1),
-                0 != n && (i[a].style.backgroundImage = 0 != e ? MH.theme.changeURL(i[a].style.backgroundImage.replace("2.108", "2.70"), e, "blueroofs") : MH.theme.changeURL(i[a].style.backgroundImage, e, "blueroofs"))) : i[a].style.backgroundImage = MH.theme.changeURL(i[a].style.backgroundImage, e, "blueroofs"));
+                0 != n && (i[a].style.backgroundImage = 0 != e ? MH.theme.changeURL(i[a].style.backgroundImage.replace("2.108", "2.70"), e, "blueroofs") : MH.theme.changeURL(i[a].style.backgroundImage, e, "blueroofs"))) : i[a].style.backgroundImage = MH.theme.changeURL(i[a].style.backgroundImage, e, "blueroofs")
+            );
         for (i = document.styleSheets[3].rules || document.styleSheets[3].cssRules,
             a = 0; a < i.length; a++)
             if (t = i[a].selectorText,
