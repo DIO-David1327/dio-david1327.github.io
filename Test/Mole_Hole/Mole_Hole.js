@@ -24,6 +24,7 @@ Object.size = function (e) {
 }
 
 var MH = {
+    //Home: "http://127.0.0.1:4000/",
     Home: "https://grepolis-david1327.e-monsite.com/",
     sName: "Mole Hole",
     sVer: "1.36 (08.02.2020)",
@@ -8106,7 +8107,7 @@ MH.BBCode2HTML = function (e) {
     ,
     MH.wo.Set_stats = function (e) {
         MH.wo.Set_stats_new = e;
-        var t = "grmh.pl (" + MH.Lang.norka + ")";
+        var t = "Grepodata";
         "ptusek" == e && (t = "grepolis.potusek.eu"),
             "gintel" == e && (t = "grepointel.com"),
             "gmatri" == e && (t = "grepolis.maxtrix.net"),
@@ -8136,7 +8137,7 @@ MH.BBCode2HTML = function (e) {
             MH.wo.Set_stats_new = MH.Set.statsGRCL,
             t.append($("<div/>", {}).html("<br>" + MH.Lang.set5 + ":")).append(mhGui.aLink("LOL", 12).attr("id", "MH_SetStats").click(function () {
                 var e, t = new mhMenu("MSTA");
-                t.add("grmh" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "grmh.pl (" + MH.Lang.norka + ")", function () {
+                t.add("grmh" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "Grepodata", function () {
                     MH.wo.Set_stats("grmh")
                 }),
                     t.add("ptusek" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "grepolis.potusek.eu", function () {
@@ -13102,7 +13103,7 @@ MH.nui_main_menu = function () {
                         src: n,
                         style: "width:99%; height:99%;"
                     })),
-                    (i = Layout.dialogWindow.open(HMoleNode.html().toString(), t, 820, 690, function () { }, !0).setPosition("center", "center")).setPosition("center", "center")) : (n = 1 == e ? MH.Home + "mini.html/?noadds&lng=" + MH.DB.land + "&p=al&wid=" + Game.world_id + "&al=" + MH._ally : MH.Home + "mini.html/?noadds&lng=" + MH.DB.land + "&p=pl&wid=" + Game.world_id + "&pl=" + MH._player,
+                    (i = Layout.dialogWindow.open(HMoleNode.html().toString(), t, 820, 690, function () { }, !0).setPosition("center", "center")).setPosition("center", "center")) : (n = 1 == e ? "https://grepodata.com/alliance?world=" + Game.world_id + "&id=" + MH._ally : "https://grepodata.com/player?world=" + Game.world_id + "&id=" + MH._player,
                         HMoleNode.append($("<iframe/>", {
                             src: n,
                             style: "width:99%; height:99%;"
