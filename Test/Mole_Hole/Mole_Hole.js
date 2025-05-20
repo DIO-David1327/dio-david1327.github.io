@@ -23,8 +23,11 @@ Object.size = function (e) {
     return n
 }
 
+let test = true;
+test = false
+
 var MH = {
-    //Home: "http://127.0.0.1:4000/",
+    Home_dio : ((Game.player_name == "david1327" && test == true) ? "http://127.0.0.1:4000/" : "https://dio-david1327.github.io/"),
     Home: "https://grepolis-david1327.e-monsite.com/",
     sName: "Mole Hole",
     sVer: "1.36 (08.02.2020)",
@@ -1088,7 +1091,7 @@ MH.Init = {
             null == e && (e = Game.locale_lang.substring(0, 2),
                 MH.LngLda = Game.world_id.substring(0, 2),
                 "zz" == MH.LngLda && (MH.LngLda = "en"));
-            e = "https://dio-david1327.github.io/Test/Mole_Hole/Lang/" + e + ".js";
+            e = MH.Home_dio + "Test/Mole_Hole/Lang/" + e + ".js";
             /*if (e === "fr") {
             e = "https://greasyfork.org/scripts/423028-mhscript-lng-fr/code/MHscript_lng_fr.user.js";
         } else if (e === "de") {
@@ -6581,7 +6584,7 @@ function _mh5987355678() {
         }
         ,
         this.TownList = function () {
-            MH.Set.TL && $("#town_groups_list .town_group_town").each(function () {
+            /*MH.Set.TL && $("#town_groups_list .town_group_town").each(function () {
                 var e, t, n, i = $(this).attr("name"), a = ITowns.getTown(i), o = $(this).get(0).innerHTML, r = '<div style="float:left; margin-left:5px;">';
                 if (!isNaN(i)) {
                     if (i = parseInt(i),
@@ -6623,7 +6626,7 @@ function _mh5987355678() {
                         o += '<div class="pop_percent ' + s + '">' + d.percent + "%</div>",
                         $(this).get(0).innerHTML = r + o
                 }
-            })
+            })*/
         }
         ,
         this.BtnStatPlayer = function (e, t) {
@@ -8110,8 +8113,8 @@ MH.BBCode2HTML = function (e) {
         MH.wo.Set_stats_new = e;
         var t = "Grepodata";
         "ptusek" == e && (t = "grepolis.potusek.eu"),
-            "gintel" == e && (t = "grepointel.com"),
-            "gmatri" == e && (t = "grepolis.maxtrix.net"),
+            //"gintel" == e && (t = "grepointel.com"),
+            //"gmatri" == e && (t = "grepolis.maxtrix.net"),
             $("#MH_SetStats").html(t)
     }
     ,
@@ -8143,13 +8146,13 @@ MH.BBCode2HTML = function (e) {
                 }),
                     t.add("ptusek" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "grepolis.potusek.eu", function () {
                         MH.wo.Set_stats("ptusek")
-                    }),
+                    }),/*
                     t.add("gintel" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "grepointel.com", function () {
                         MH.wo.Set_stats("gintel")
                     }),
                     t.add("gmatri" == MH.wo.Set_stats_new ? "rb1.gif" : "rb0.gif", "grepolis.maxtrix.net", function () {
                         MH.wo.Set_stats("gmatri")
-                    }),
+                    }),*/
                     e = $("#MH_SetStats").offset(),
                     t.poupAT(e.left, e.top + 10)
             })),
@@ -12739,7 +12742,8 @@ MH.nui_main_menu = function () {
                     WMap.setNightMode(Game.night_mode),
                     $("#TownOverview_extra .ui_city_overview").toggleClass("night"),
                     1 == MH.Set.theme && $(".ui_city_overview .town_background").css("background-image", MH.theme.GetBCK()),
-                    MH.real_night_mode && $("#map_night").css("display", "block")
+                    MH.real_night_mode && $("#map_night").css("display", "block"),
+                    $("#nightMode_button").click();
             })),
                 $(".viewport.js-city-overview-viewport").append(n)),
             "none" != $("#toolbar_activity_commands_list").css("display") && 0 != MH.CMD_MaxHeight && $("#toolbar_activity_commands_list .js-dropdown-item-list").css("max-height", MH.CMD_MaxHeight + "px"),

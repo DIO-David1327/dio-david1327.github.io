@@ -23,7 +23,7 @@ HMoleLangAdd = {
         ge3: ["Die Erde erĂśffnet dir Zugang\nzu ungeahnten ReichtĂźmern.", "Die Stadt erhĂ¤lt 500 SilbermĂźnzen.", ""],
     },
 
-    norka: "Maulwurfsloch",
+    norka: "Maulwurfsloch (David1327)",
     konwrap: "Bericht Konverter",
     repRec: "Angemeldet Bericht",
     repPla: "Gespeichert Bericht",

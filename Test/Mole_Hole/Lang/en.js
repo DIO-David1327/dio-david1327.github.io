@@ -23,7 +23,7 @@ HMoleLangAdd = {
         ge3: ["The ground opens up\nand grants you access to incredible riches.", "The city receives 500 silver coins.", ""],
     },
 
-    norka: "Mole Hole",
+    norka: "Mole Hole (David1327)",
     konwrap: "Report Converter",
     repRec: "Remember Report",
     repPla: "Saved Report",
