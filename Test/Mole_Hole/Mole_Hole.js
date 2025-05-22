@@ -3101,7 +3101,7 @@ MH.Init = {
                         "" != MH.RepClipboard && (MH.TxtaIns(MH.RepClipboard, i.find(n)[0]),
                             MH.RepClipboard = e,
                             this.style.background = "url('" + MH.Home + "medias/images/but.png') repeat scroll -22px 0px rgba(0, 0, 0, 0)")
-                }).mousePopup(new MousePopup(MH.Lang.insert + " " + MH.Lang.situation + " " + MH.GLng.Report)))),
+                }).mousePopup(new MousePopup(MH.Lang.insert + " " + MH.Lang.situation + " " + MH.GLng.Report))))/*,
             i.find(".bb_button_wrapper").append($("<a/>", {
                 href: "#",
                 style: "margin:0 3px 0 0; width:22px; height:23px; float:left; background:url('" + MH.Home + "medias/images/but.png') repeat scroll -242px 0px rgba(0, 0, 0, 0) "
@@ -3123,7 +3123,7 @@ MH.Init = {
                     e += 50,
                     i.find("#MH_EmotsPopup").css("top", e + "px"),
                     i.find("#MH_EmotsPopup").show())
-            }).mousePopup(new MousePopup(MH.Lang.insert + " " + MH.Lang.insEmo)))))
+            }).mousePopup(new MousePopup(MH.Lang.insert + " " + MH.Lang.insEmo)))*/))
     }
     ,
     MH.bbCodeButtionsBox = function (e, i) {
@@ -6322,10 +6322,13 @@ function _mh5987355678() {
         }
         ,
         this.TownIndexWindowRename = function () {
-            $("#TownOverview_extra").length && (n.setTitle('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div> ' + DM.getl10n("town_index").window_title + " - " + Game.townName),
+            //$("#TownOverview_extra").length && (n.setTitle('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div> ' + DM.getl10n("town_index").window_title + " - " + Game.townName),
+            $("#TownOverview_extra").length && (n.setTitle(DM.getl10n("town_index").window_title + " - " + Game.townName + " - id:" + Game.townId + ""),
+            console.log(n),
                 $("#TownOverview_extra .town_background").css({
                     transform: "translate(-650px,-304px);"
                 }),
+                n.getJQElement().parent().find(".ui-dialog-title").before('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div>'),
                 n.getJQElement().parent().find(".ui-dialog-titlebar .maximize").length || n.getJQElement().parent().find(".ui-dialog-titlebar").append($("<div/>", {
                     class: "btn_wnd maximize",
                     style: "float:right;"
@@ -12440,7 +12443,8 @@ MH.nui_main_menu = function () {
                     style: "height:14px; visibility:hidden; display:none; background:url('" + MH.Home + "/medias/images/LayA.gif') repeat scroll 0px 0px rgba(0, 0, 0, 0)"
                 }).append($("<a/>", {
                     id: "HMConvLink",
-                    href: MH.Home + "?p=rnk&m=cnq" + MH.GetHomeUrlParm(),
+                    //href: MH.Home + "?p=rnk&m=cnq" + MH.GetHomeUrlParm(),
+                    href:"https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole_backup-of-david1327.user.js",
                     target: "_blank",
                     style: "color:#ECB44D; font-size:11px;"
                 }).mouseout(function () {
@@ -12902,7 +12906,7 @@ MH.nui_main_menu = function () {
         return i
     }
     ,
-    MH.init_TroopsMovementsList = function () {
+    MH.init_TroopsMovementsList = function () {/*
         MH.Set.exCmdList && ($("#toolbar_activity_commands_list").append($("<div/>", {
             id: "HMResizeCom",
             style: "margin:2px; display:inline-block; position:relative; z-index:10; cursor:s-resize; top:3px;"
@@ -12962,7 +12966,7 @@ MH.nui_main_menu = function () {
                         }
                         )
             }).appendTo("div#toolbar_activity_commands_list"))
-    }
+    */}
     ,
     MH.PoupMenu = function () {
         var e, t, n = new mhMenu("MM"), i = ["messages", "reports", "alliance", "allianceforum", "ranking", "profile", "invite_friends"];

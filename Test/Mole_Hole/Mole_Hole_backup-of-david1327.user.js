@@ -7,7 +7,7 @@
 // @updateURL   https://dio-david1327.github.io/Test/Mole_Hole/Mole_Hole_backup-of-david1327.user.js
 // @include		https://*.grepolis.*/game*
 // @include		https://*.grepolis.*/start?action=select_new_world
-// @icon		https://www.tuto-de-david1327.com/medias/images/icon-1.png
+// @icon		https://grepolis-david1327.e-monsite.com/medias/images/logo.gif
 // @grant		none
 // ==/UserScript==
 
