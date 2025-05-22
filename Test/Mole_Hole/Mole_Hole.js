@@ -6323,12 +6323,12 @@ function _mh5987355678() {
         ,
         this.TownIndexWindowRename = function () {
             //$("#TownOverview_extra").length && (n.setTitle('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div> ' + DM.getl10n("town_index").window_title + " - " + Game.townName),
-            $("#TownOverview_extra").length && (n.setTitle(DM.getl10n("town_index").window_title + " - " + Game.townName + " - id:" + Game.townId + ""),
+            $("#TownOverview_extra").length && (n.setTitle(DM.getl10n("town_index").window_title + " - " + Game.townName),
             console.log(n),
                 $("#TownOverview_extra .town_background").css({
                     transform: "translate(-650px,-304px);"
                 }),
-                n.getJQElement().parent().find(".ui-dialog-title").before('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div>'),
+                n.getJQElement().parent().find(".town_bbcode_link").length || n.getJQElement().parent().find(".ui-dialog-title").before('<a class="town town_bbcode_link" href="#" id="twn_bb_lnk" style="float: left; margin:-1px 0 0;" onclick="$(\'#twn_bb_id\').toggle();"></a><input type="text" class="town_bbcode_id" oncontextmenu="this.select();" onfocus="this.select();" onclick="this.select();" value="[town]' + Game.townId + '[/town]" id="twn_bb_id" style="float: left; display: none;"></div>'),
                 n.getJQElement().parent().find(".ui-dialog-titlebar .maximize").length || n.getJQElement().parent().find(".ui-dialog-titlebar").append($("<div/>", {
                     class: "btn_wnd maximize",
                     style: "float:right;"
