@@ -1453,7 +1453,7 @@ MH.Init = {
                                     }).jGP = i.getJQElement(),
                                     o.cJQ = $(o.cJQt)
                             } else {
-                                if ((i = WM.getWindowByType(e)[0]).length <= 0)
+                                //if ((i = WM.getWindowByType(e)[0]).length <= 0)
                                     return;
                                 (o = {
                                     wnd: i,
@@ -2319,7 +2319,7 @@ MH.Init = {
                             "border-bottom": "1px solid #d0be97"
                         })
                 })),
-                $(".message_post_container .message_post").each(function (e, t) {
+                /*$(".message_post_container .message_post").each(function (e, t) {
                     e = " top:-15px;",
                         MH.Set.MesFor && (e = ""),
                         $(t).append($("<div/>", {
@@ -2352,7 +2352,7 @@ MH.Init = {
                                 e = '[quote="' + $(this).parent().parent().find(".message_poster .message_poster_id .gp_player_link").html().clear() + '"]' + e + "[/quote]",
                                 $("#message_reply_message").val(e)
                         })))
-                }),
+                }),*/
                 (i = t.find(".message_post_container")).length && (r = allPg = 1,
                     (l = t.find("#message_message_list .game_header").clone()).find("*").remove(),
                     l = l.html().clear(),
