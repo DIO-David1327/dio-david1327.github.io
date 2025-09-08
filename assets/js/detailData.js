@@ -1,6 +1,4 @@
 var data_month = ([
-    ['2024/07', 10, 3.79],
-    ['2024/08', 10, 8.79],
     ['2024/09', 10, 10.79],
     ['2024/10', 10, 5.79],
     ['2024/11', 10, 38.58],
@@ -11,9 +9,11 @@ var data_month = ([
     ['2025/04', 10, 25.38],
     ['2025/05', 10, 25.38],
     ['2025/06', 10, 23.16],
+    ['2025/07', 10, 23.16],
+    ['2025/08', 10, 14.87],
 ]);
 
-var date = '09/07/2025';
+var date = '08/09/2025';
 
 var detailData = {
     '2020/01': [
@@ -259,5 +259,14 @@ var detailData = {
         { 'dat': '2025-06-16', 'inc': 19.59, 'who': 'Sidney A', 'pays': ['', ' ', ''] },
         { 'dat': '2025-06-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2025-06-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/07': [
+        { 'dat': '2025-07-16', 'inc': 19.59, 'who': 'Sidney A', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-07-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-07-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/08': [
+        { 'dat': '2025-08-15', 'inc': 11.3, 'who': 'Detlef Z', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2025-08-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-08-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/08': [
     ],
 };
