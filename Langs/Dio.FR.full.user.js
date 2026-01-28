@@ -45,7 +45,7 @@ DIO_LANG.fr = {
         Learn_more: "En savoir plus",
 
         cat_units: "Unités", //uw.DM.getl10n("context_menu").titles.units_info
-        cat_icons: "Icônes de la ville",
+        cat_icons: "Ville",
         cat_forum: "Forum", //uw.DM.getl10n("layout").main_menu.items.forum
         cat_trade: "Commerce", //uw.DM.getl10n("layout").premium_button.premium_menu.trade_overview
         //cat_wonders: "Merveille", 

@@ -44,7 +44,7 @@ DIO_LANG.cz = {
         Learn_more: "Zjistit více",
 
         cat_units: "Jednotky",
-        cat_icons: "Ikony měst",
+        cat_icons: "Město",
         cat_forum: "Forum",
         cat_trade: "Obchod",
         cat_wonders: "Div světa",

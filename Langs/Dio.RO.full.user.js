@@ -44,7 +44,7 @@ DIO_LANG.ro = {
         Learn_more: "Aflați mai multe",
 
         cat_units: "Unități",
-        cat_icons: "Iconițele pentru orașe",
+        cat_icons: "Orașe",
         cat_forum: "Forum",
         cat_trade: "Magazin",
         cat_wonders: "Minunile Lumii",

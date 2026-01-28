@@ -44,7 +44,7 @@ DIO_LANG.gr = {
         Learn_more: 'Μάθε περισσότερα',
 
         cat_units: 'Μονάδες',
-        cat_icons: 'Εικονίδια πόλεων',
+        cat_icons: 'πόλεις',
         cat_forum: 'Φόρουμ',
         cat_trade: 'Εμπόριο',
         cat_wonders: 'Θαύμα του κόσμου',

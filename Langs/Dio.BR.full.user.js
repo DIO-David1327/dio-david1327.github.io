@@ -44,7 +44,7 @@ DIO_LANG.br = {
         Learn_more: "Saber mais",
 
         cat_units: "Unidades",
-        cat_icons: "Ícones nas Cidades",
+        cat_icons: "Cidades",
         cat_forum: "Forum",
         cat_trade: "Comércio",
         cat_wonders: "Maravilhas do Mundo",

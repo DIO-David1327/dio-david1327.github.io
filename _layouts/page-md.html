@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div id="wrapper">
+
+    <!-- Banner -->
+    <!-- Note: The "styleN" class below should match that of the header element. -->
+    <section id="banner" class="style1">
+        <div class="inner">
+            <span class="image">
+                <img src="/img/site/pic07.jpg" alt="" />
+            </span>
+            <header class="major">
+                <h1>{{ page.title | escape }}</h1>
+            </header>
+            <div class="content">
+                <p>{{ page.description | escape }}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section id="one">
+            <a name=""></a>
+            <div class="inner">
+                <header class="major">
+                    <h2>{{ page.title | escape }}</h2>
+                </header>
+                <div id="trans_content" class="contentDiv">
+                    {{ content }}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{%- if site.disqus_shortname -%}
+{%- include disqus_comments.html -%}
+{%- endif -%}

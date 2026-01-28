@@ -45,7 +45,7 @@ DIO_LANG.AUTO = {
         //Learn_more: "En savoir plus",
 
         cat_units: uw.DM.getl10n("context_menu").titles.units_info, //"Unités"
-            //cat_icons: "Icônes de la ville",
+            cat_icons: uw.DM.getl10n("bbcodes").town.name,
             cat_forum: uw.DM.getl10n("layout").main_menu.items.forum, //"Forum"
                 cat_trade: uw.DM.getl10n("layout").premium_button.premium_menu.trade_overview, //"Commerce"
                     //cat_wonders: "Merveille", 

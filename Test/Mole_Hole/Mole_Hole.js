@@ -29,7 +29,7 @@ test = false
 var MH = {
     Home_dio : ((Game.player_name == "david1327" && test == true) ? "http://127.0.0.1:4000/" : "https://dio-david1327.github.io/"),
     Home: "https://grepolis-david1327.e-monsite.com/",
-    sName: "Mole Hole",
+    sName: "Mole Hole (David1327)",
     sVer: "1.36 (08.02.2020)",
     ScriptAtcive: !0,
     RepClipboard: "",
@@ -2531,7 +2531,9 @@ MH.Init = {
     ,
     MH.ev.ren.player_index = function (e) {
         0 == e.cJQ.find("#HMoleSetupLink").length && e.cJQ.find(".settings-menu ul").eq(2).append($("<li>").append($("<img/>", {
-            src: MH.Home + "imgs/icon.ico"
+            //src: MH.Home + "imgs/icon.ico"
+            src: "https://grepolis-david1327.e-monsite.com/medias/images/logo.gif",
+            style: "width: 15px"
         })).append($("<a/>", {
             id: "HMoleSetupLink",
             href: "#"
@@ -2559,7 +2561,7 @@ MH.Init = {
                     float: "left",
                     margin: "0 0 0 0"
                 })),
-                i.find("#player_towns .game_border .game_header").html(i.find("#player_towns .game_border .game_header").html() + ": " + i.find("#player_towns li").length),
+                //i.find("#player_towns .game_border .game_header").html(i.find("#player_towns .game_border .game_header").html() + ":999 " + i.find("#player_towns li").length),
                 i.find("#player_towns .game_border .game_list li .gp_town_link").each(function () {
                     var e, t = MH.Link2Struct($(this).attr("href"));
                     _log(t);
@@ -2575,14 +2577,14 @@ MH.Init = {
                     Game.player_id == a && "end_game_type_domination" == Game.features.end_game_type && (e = t.ix + ":" + t.iy,
                         0 <= MH.DomIslands.t.indexOf(e) && $(this).append('<div class="mhTwnIco domination" style="float:right;"></div>'))
                 }),
-                null != a && (i.find("#profile_info .game_border").append('<input id="mh_player_bbcode_id" type="text" value="[player]' + n + '[/player]" onclick="this.select();" onfocus="this.select();" style="position:absolute; right:22px; top:0; display:none;">'),
+                /*null != a && (i.find("#profile_info .game_border").append('<input id="mh_player_bbcode_id" type="text" value="[player]' + n + '[/player]" onclick="this.select();" onfocus="this.select();" style="position:absolute; right:22px; top:0; display:none;">'),
                     i.find("#profile_info .game_border").append(mhGui.But(29, "float:left; margin:0px 0 0 0;").css({
                         position: "absolute",
                         right: "1px",
                         top: "0"
                     }).mousePopup(new MousePopup("BBCode")).click(function () {
                         "none" == i.find("#profile_info .game_border #mh_player_bbcode_id").css("display") ? i.find("#profile_info .game_border #mh_player_bbcode_id").css("display", "inline-block") : i.find("#profile_info .game_border #mh_player_bbcode_id").css("display", "none")
-                    }))),
+                    }))),*/
                 MH.YouTubeLinks(i.find("#player_profile"), !0)))
     }
     ,
@@ -2608,7 +2610,7 @@ MH.Init = {
                 a.find("#ally_buttons .center_box").append(mhGui.But(10, "float:left; position:relative; top:-23px; left:25px;").mousePopup(new MousePopup(MH.Lang.SymAlly)).click(function () {
                     MH.SYMWnd(allyID, n, !0)
                 })),
-                null != allyID && a.find("#ally_buttons .center_box").append(mhAddStd.BtnAllyListAdd(allyID, n).css({
+                /*null != allyID && a.find("#ally_buttons .center_box").append(mhAddStd.BtnAllyListAdd(allyID, n).css({
                     float: "left",
                     position: "relative",
                     top: "-23px",
@@ -2634,7 +2636,7 @@ MH.Init = {
                         top: "0"
                     }).mousePopup(new MousePopup("BBCode")).click(function () {
                         "none" == a.find("#ally_towns .game_border #mh_ally_bbcode_id").css("display") ? a.find("#ally_towns .game_border #mh_ally_bbcode_id").css("display", "inline-block") : a.find("#ally_towns .game_border #mh_ally_bbcode_id").css("display", "none")
-                    }))),
+                    }))),*/
                 MH.YouTubeLinks(a.find("#ally_profile"), !0)))
     }
     ,
@@ -2664,17 +2666,18 @@ MH.Init = {
         mhCol.ally.hasOwnProperty("name") && (allyID = mhCol.ally.id,
             r = mhCol.ally.name);
         var l = a.find("#towninfo_towninfo .game_border .game_header.bold").html().strip_tags().replace(/\s+/g, " ")
-            , s = a.find("input#town_bbcode_id").attr("value").replace(/\[town\](.*?)\[\/town\]/, "$1");
+            , s = a.find("input#town_bbcode_id").attr("value").replace(/\[town\](.*?)\[\/town\]/, "$1")
+            , t = a.find(".game_header.bold").text().trim();
         a.find("#town_bbcode_link").css("float", "left").appendTo(a.find("#towninfo_towninfo .game_border .game_header")),
             a.find("#town_bbcode_id").css("float", "left").appendTo(a.find("#towninfo_towninfo .game_border .game_header")),
             (n = a.find("#towninfo_towninfo .game_border .game_list li:first")).html('<span class="bbcodes bbcodes_town"> <a href="#">' + l + "</a>" + n.html()),
             a.find("#towninfo_towninfo .game_border .game_list li:first .bbcodes_town img:first").css("float", "unset"),
-            $("span.ui-dialog-title").html(l),
+            //$("span.ui-dialog-title").html(l),
             n.append(mhGui.But(12).css({
                 float: "right",
                 margin: "-2px 0 0 0"
             }).mousePopup(new MousePopup(MH.Lang.STATST)).mousedown(function () {
-                MH.MiniForm("th", "town=" + s)
+                MH.MiniForm("th", "town=" + s, t)
             })),
             i = MH.Link2Struct(a.find("a.gp_island_link:first").attr("href")),
             n.append(mhAddStd.BtnTownListAdd(s, l, i.ix, i.iy).css({
@@ -7084,7 +7087,8 @@ MH.BBCode2HTML = function (e) {
                         $(t).attr("target", "_blank"))
                 }),
                 o.find("a.gp_town_link").each(function (e, t) {
-                    (r = MH.utl.bbcodes_town_id(t)) && ($(t).attr("href", MH.Home + "?p=tol&m=cit&wid=" + MH.DB.worldID + "&town=" + r),
+                    //(r = MH.utl.bbcodes_town_id(t)) && ($(t).attr("href", MH.Home + "?p=tol&m=cit&wid=" + MH.DB.worldID + "&town=" + r),
+                    (r = MH.utl.bbcodes_town_id(t)) && ($(t).attr("href", "https://grepodata.com/conquest/town/" + MH.DB.worldID + "/" + r),
                         $(t).attr("target", "_blank"))
                 }),
                 o.find(".bbcodes_url").css("display", "unset"),
@@ -7772,7 +7776,8 @@ MH.BBCode2HTML = function (e) {
                     $("#player_settings").hide(),
                     $("#mh_SetMainBox").show()
             })),
-            $("#wotab").append('<li><img src="' + MH.Home + 'imgs/icon.ico"</img></li>'),
+            //$("#wotab").append('<li><img src="' + MH.Home + 'imgs/icon.ico"</img></li>'),
+            $("#wotab").append('<li><img src="https://grepolis-david1327.e-monsite.com/medias/images/logo.gif"</img></li>'),
             $("#wotab_" + MH.wo.nTMain).click()
     }
     ,
@@ -12775,7 +12780,7 @@ MH.nui_main_menu = function () {
             $("<a/>", {
                 href: "#",
                 class: "button GMHADD",
-                style: "top:115px; width:20px; height:18px; background:url('" + MH.Home + "medias/images/but.png') -374px -18px;"
+                style: "top:115px; width:20px; height:18px; background:url('" + MH.Home + "medias/images/but.png') -374px -18px; position: absolute;"
             }).click(function () {
                 $("#ui_box .nui_right_box").show(),
                     $("#ui_box .nui_units_box").show(),
@@ -13121,21 +13126,22 @@ MH.nui_main_menu = function () {
                     i.getJQElement().find(".gpwindow_content").css("overflow", "hidden"))
     }
     ,
-    MH.MiniForm = function (e, t) {
-        t = '<iframe id="mhMiniFrame" src="' + MH.Home + "/mini.html?p=" + e + "&wid=" + Game.world_id + "&lng=" + MH.DB.land + "&" + t + '" style="width:99%; height:99%;"></iframe>';
+    MH.MiniForm = function (e, t, s) {
+        //t = '<iframe id="mhMiniFrame" src="' + MH.Home + "/mini.html?p=" + e + "&wid=" + Game.world_id + "&lng=" + MH.DB.land + "&" + t + '" style="width:99%; height:99%;"></iframe>';
+        t = '<iframe id="mhMiniFrame" src="https://grepodata.com/conquest/town/' + Game.world_id + t.replace("town=", "/") + '" style="width:99%; height:99%;'+t+'"></iframe>';
         if (null != MH.wndMiniForm) {
             try {
                 MH.wndMiniForm.close()
             } catch (e) { }
             MH.wndMiniForm = null
         }
-        MH.wndMiniForm = Layout.dialogWindow.open(t, "https://grmh.pl/mini.html", 926, 704, function () {
+        MH.wndMiniForm = Layout.dialogWindow.open(t, s, 926, 704, function () {
             MH.wndMiniForm = null
         }, !0),
             MH.wndMiniForm.setPosition("center", "center"),
             MH.wndMiniForm.getJQElement().find(".gpwindow_content").css("overflow", "hidden"),
             MH.wndMiniForm.getJQElement().parent().css({
-                "z-index": "2001"
+                //"z-index": "2001"
             })
     }
     ,

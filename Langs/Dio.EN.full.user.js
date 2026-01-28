@@ -45,7 +45,7 @@ DIO_LANG.en = {
         Learn_more: "Learn more",
 
         cat_units: "Units",
-        cat_icons: "Town icons",
+        cat_icons: "Town",
         cat_forum: "Forum",
         cat_trade: "Trade",
         cat_wonders: "World wonder",

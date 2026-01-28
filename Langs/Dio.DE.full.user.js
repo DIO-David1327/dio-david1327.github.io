@@ -44,7 +44,7 @@ DIO_LANG.de = {
         Learn_more: "Mehr erfahren",
 
         cat_units: "Einheiten",
-        cat_icons: "Stadticons",
+        cat_icons: "Stad",
         cat_forum: "Forum",
         cat_trade: "Handel",
         cat_wonders: "Weltwunder",

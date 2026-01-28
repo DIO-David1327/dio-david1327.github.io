@@ -44,7 +44,7 @@ DIO_LANG.nl = {
         Learn_more: "Kom meer te weten",
 
         cat_units: "Eenheden",
-        cat_icons: "Stad pictogrammen",
+        cat_icons: "Stad",
         cat_forum: "Forum",
         cat_trade: "Handel",
         cat_wonders: "Wereld Wonder",
