@@ -1,9 +1,4 @@
 var data_month = ([
-    ['2024/09', 10, 10.79],
-    ['2024/10', 10, 5.79],
-    ['2024/11', 10, 38.58],
-    ['2024/12', 10, 37.75],
-    ['2025/01', 10, 24.86],
     ['2025/02', 10, 27.38],
     ['2025/03', 10, 15.79],
     ['2025/04', 10, 25.38],
@@ -11,9 +6,14 @@ var data_month = ([
     ['2025/06', 10, 23.16],
     ['2025/07', 10, 23.16],
     ['2025/08', 10, 14.87],
+    ['2025/09', 10, 12.93],
+    ['2025/10', 10, 8.07],
+    ['2025/11', 10, 4.19],
+    ['2025/12', 10, 13.57],
+    ['2026/01', 10, 70.13],
 ]);
 
-var date = '08/09/2025';
+var date = '28/01/2026';
 
 var detailData = {
     '2020/01': [
@@ -267,6 +267,27 @@ var detailData = {
         { 'dat': '2025-08-15', 'inc': 11.3, 'who': 'Detlef Z', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2025-08-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2025-08-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
-    ], '2025/08': [
+    ], '2025/09': [
+        { 'dat': '2025-09-10', 'inc': 9.36, 'who': 'LILIANA P', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-09-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-09-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/10': [
+        { 'dat': '2025-10-12', 'inc': 4.5, 'who': 'Roman B', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2025-10-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-10-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/11': [
+        { 'dat': '2025-11-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-11-22', 'inc': 0.62, 'who': 'laurent k', 'pays': ['FR', 'France', 'France'] },
+        { 'dat': '2025-11-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2025/12': [
+        { 'dat': '2025-12-11', 'inc': 10, 'who': 'Iñaki S', 'pays': ['', ' ', ''] },
+        { 'dat': '2025-12-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2025-12-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/01': [
+        { 'dat': '2026-01-01', 'inc': 47.2, 'who': 'Michael G', 'pays': ['', ' ', ''] },
+        { 'dat': '2026-01-05', 'inc': 10, 'who': 'Ulla R', 'pays': ['SE', 'Suède', 'Sweden'] },
+        { 'dat': '2026-01-12', 'inc': 9.36, 'who': 'Ruud K', 'pays': ['', ' ', ''] },
+        { 'dat': '2026-01-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-01-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ],
 };
