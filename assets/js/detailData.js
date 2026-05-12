@@ -1,8 +1,4 @@
 var data_month = ([
-    ['2025/02', 10, 27.38],
-    ['2025/03', 10, 15.79],
-    ['2025/04', 10, 25.38],
-    ['2025/05', 10, 25.38],
     ['2025/06', 10, 23.16],
     ['2025/07', 10, 23.16],
     ['2025/08', 10, 14.87],
@@ -11,9 +7,12 @@ var data_month = ([
     ['2025/11', 10, 4.19],
     ['2025/12', 10, 13.57],
     ['2026/01', 10, 70.13],
+    ['2026/02', 10, 37.85],
+    ['2026/03', 10, 3.57],
+    ['2026/04', 10, 3.57],
+    ['2026/05', 10, 0],
 ]);
-
-var date = '28/01/2026';
+var date = '12/05/2026';
 
 var detailData = {
     '2020/01': [
@@ -272,7 +271,7 @@ var detailData = {
         { 'dat': '2025-09-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2025-09-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2025/10': [
-        { 'dat': '2025-10-12', 'inc': 4.5, 'who': 'Roman B', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2025-10-12', 'inc': 4.5, 'who': 'Sashaka', 'pays': ['DE', 'Allemagne', 'Germany'] },
         { 'dat': '2025-10-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2025-10-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2025/11': [
@@ -289,5 +288,16 @@ var detailData = {
         { 'dat': '2026-01-12', 'inc': 9.36, 'who': 'Ruud K', 'pays': ['', ' ', ''] },
         { 'dat': '2026-01-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2026-01-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/02': [
+        { 'dat': '2026-02-01', 'inc': 34.28, 'who': 'Joao M', 'pays': ['', ' ', ''] },
+        { 'dat': '2026-02-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-02-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/03': [
+        { 'dat': '2026-03-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-03-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/04': [
+        { 'dat': '2026-04-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-04-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/05': [
     ],
 };
