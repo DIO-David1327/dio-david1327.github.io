@@ -3,10 +3,10 @@
 //////////////////////////////////////////////
 DIO_LANG.fr = {
     Notification: {
-            //A: "",
-            //B: "",
-            //C: "",
-        },
+        //A: "",
+        //B: "",
+        //C: "",
+    },
     link: {
         ///update
         //update: "",
@@ -127,6 +127,7 @@ DIO_LANG.fr = {
         Idl: ["Joueur inactif", "Afficher les joueurs inactifs. Powered by GREPODATA"],
         Saw: ["Sauvegarde des remparts", "Permet de sauvegarder les troupes dans les remparts"],
         Att: ["Alarme d'attaque", "Recevez des avertissements instantanés lorsque vous êtes attaqué, renforçant votre sécurité"],
+        Com: ["Coloration des messages", "Applique une couleur aux messages selon leur origine (alliance, ennemi, pacte)."],
 
         err: ["Envoyer des rapports de bogues automatiquement", "Si vous activez cette option, vous pouvez aider à identifier les bugs."],
     },

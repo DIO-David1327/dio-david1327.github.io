@@ -10,9 +10,10 @@ var data_month = ([
     ['2026/02', 10, 37.85],
     ['2026/03', 10, 3.57],
     ['2026/04', 10, 3.57],
-    ['2026/05', 10, 0],
+    ['2026/05', 10, 3.57],
 ]);
-var date = '12/05/2026';
+
+var date = '27/07/2026';
 
 var detailData = {
     '2020/01': [
@@ -299,5 +300,12 @@ var detailData = {
         { 'dat': '2026-04-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2026-04-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2026/05': [
+        { 'dat': '2026-05-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-05-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/06': [
+        { 'dat': '2026-06-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-06-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/07': [
+        { 'dat': '2026-07-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
     ],
 };

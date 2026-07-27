@@ -44,14 +44,14 @@ DIO_LANG.AUTO = {
         //Feature2: "Nouvelle version",
         //Learn_more: "En savoir plus",
 
-        cat_units: uw.DM.getl10n("context_menu").titles.units_info, //"Unités"
+        cat_units: uw.DM.getl10n("context_menu").titles?.units_info, //"Unités"
             cat_icons: uw.DM.getl10n("bbcodes").town.name,
-            cat_forum: uw.DM.getl10n("layout").main_menu.items.forum, //"Forum"
-                cat_trade: uw.DM.getl10n("layout").premium_button.premium_menu.trade_overview, //"Commerce"
+            cat_forum: uw.DM.getl10n("layout").main_menu?.items?.forum, //"Forum"
+                cat_trade: uw.DM.getl10n("layout").premium_button?.premium_menu?.trade_overview, //"Commerce"
                     //cat_wonders: "Merveille", 
                     //cat_layout: "Disposition",
-                    cat_other: uw.DM.getl10n("report").inbox.filter_types.misc, //"Divers"
-                        cat_Premium: uw.DM.getl10n("premium").common.window_title, //"Premium"
+                    cat_other: uw.DM.getl10n("report").inbox?.filter_types?.misc, //"Divers"
+                        cat_Premium: uw.DM.getl10n("premium").common?.window_title, //"Premium"
             //cat_Quack: "Quack",
         },
     Options: {
@@ -112,7 +112,7 @@ DIO_LANG.AUTO = {
     },
     movement: {
         //off: 'Attaque entrante',
-        offs: uw.DM.getl10n("layout").toolbar_activities.incomming_attacks, //'Attaques entrantes'
+        offs: uw.DM.getl10n("layout").toolbar_activities?.incomming_attacks, //'Attaques entrantes'
             //def: 'Soutien entrant', //uw.DM.getl10n("context_menu").titles.support + ...
             //defs: 'Soutiens entrants',
         },
@@ -138,9 +138,9 @@ DIO_LANG.AUTO = {
         //total: "Total",
         available: uw.DM.getl10n("hercules2014", "available"), //"Disponible"
             //outer: "Extérieur",
-            con: uw.DM.getl10n("context_menu").titles.select_town, //"Sélectionner"
-                sup: uw.DM.getl10n("context_menu").titles.support, //"Soutien"
-                    her: uw.DM.getl10n("heroes").collection.heroes, //"Héros"
+            con: uw.DM.getl10n("context_menu").titles?.select_town, //"Sélectionner"
+                sup: uw.DM.getl10n("context_menu").titles?.support, //"Soutien"
+                    her: uw.DM.getl10n("heroes").collection?.heroes, //"Héros"
                         /// Smileys
                         //std: "Standard",
                         //gre: "Grepo",
@@ -243,8 +243,8 @@ DIO_LANG.AUTO = {
         //farming_villages: 'Villages de paysans',
         //menu: 'Menu',
         city_view: uw.DM.getl10n("town_index").window_title, //'Vue de la ville'
-            messages: uw.DM.getl10n("layout").main_menu.items.messages, //'Messages'
-                reports: uw.DM.getl10n("layout").main_menu.items.reports, //'Rapports'
+            messages: uw.DM.getl10n("layout").main_menu?.items?.messages, //'Messages'
+                reports: uw.DM.getl10n("layout").main_menu?.items?.reports, //'Rapports'
                     alliance: uw.DM.getl10n("layout").main_menu.items.alliance, //'Alliance'
                         alliance_forum: uw.DM.getl10n("layout").main_menu.items.allianceforum, //'Forum d\'alliance'
                             settings: uw.DM.getl10n("layout").config_buttons.settings, //'Réglages'
@@ -269,10 +269,10 @@ DIO_LANG.AUTO = {
         //stored_silver: 'Capacité de stockage des pièces d\'argent',
         //silver_to_store: "Pièces d'argent stockables",
         //name: 'Nom',
-        wood: uw.DM.getl10n("barracks").cost_details.wood, //'Bois'
-            stone: uw.DM.getl10n("barracks").cost_details.stone, //'Pierre'
-                silver: uw.DM.getl10n("barracks").cost_details.iron, //'Pièces d\'argent'
-                    search_for: uw.DM.getl10n("place").simulator.configuration.technologies //'Rechercher'
+        wood: uw.DM.getl10n("barracks").cost_details?.wood, //'Bois'
+            stone: uw.DM.getl10n("barracks").cost_details?.stone, //'Pierre'
+                silver: uw.DM.getl10n("barracks").cost_details?.iron, //'Pièces d\'argent'
+                    //search_for: "" //'Rechercher'
     },
     grepo_mainmenu: {
         city_view: uw.DM.getl10n("town_index").window_title, //'Vue de la ville'

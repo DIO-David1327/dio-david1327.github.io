@@ -126,6 +126,7 @@ DIO_LANG.en = {
         Idl: ["Inactive Player", "Displays inactive players for more effective management. Powered by GREPODATA"],
         Saw: ["Wall Backup", "Allows for the backup of troops in the walls, ensuring enhanced protection"],
         Att: ["Attack Alarm", "Receive instant warnings when under attack, reinforcing your security"],
+        Com: ["Message coloring", "Applies a color to messages based on their origin (alliance, enemy, pact)."],
 
         Comp_GRCT: "The following functions are not compatible with GRCT",
         Non_compatible: "Not compatible, enable in the settings of ",
