@@ -1,6 +1,4 @@
 var data_month = ([
-    ['2025/06', 10, 23.16],
-    ['2025/07', 10, 23.16],
     ['2025/08', 10, 14.87],
     ['2025/09', 10, 12.93],
     ['2025/10', 10, 8.07],
@@ -11,9 +9,11 @@ var data_month = ([
     ['2026/03', 10, 3.57],
     ['2026/04', 10, 3.57],
     ['2026/05', 10, 3.57],
+    ['2026/06', 10, 3.57],
+    ['2026/07', 10, 22.93],
 ]);
 
-var date = '27/07/2026';
+var date = '28/07/2026';
 
 var detailData = {
     '2020/01': [
@@ -307,5 +307,8 @@ var detailData = {
         { 'dat': '2026-06-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ], '2026/07': [
         { 'dat': '2026-07-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
+        { 'dat': '2026-07-27', 'inc': 10, 'who': 'Pascal M', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2026-07-28', 'inc': 9.36, 'who': 'Jonathan S', 'pays': ['DE', 'Allemagne', 'Germany'] },
+        { 'dat': '2026-07-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
     ],
 };
