@@ -319,8 +319,10 @@ var detailData = {
         { 'dat': '2026-09-12', 'inc': 1, 'who': 'Florian B', 'pays': ['', ' ', ''] },
         { 'dat': '2026-09-19', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2026-09-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/10': [
         { 'dat': '2026-10-01', 'inc': 1.57, 'who': 'Davryll', 'pays': ['GB', 'Royaume-Uni', 'United Kingdom'] },
         { 'dat': '2026-10-28', 'inc': 2, 'who': 'Andreas H', 'pays': ['DE', 'Allemagne', 'Germany'] },
+    ], '2026/10': [
         { 'dat': '2026-11-13', 'inc': 2, 'who': 'István K', 'pays': ['', ' ', ''] },
     ],
 };
